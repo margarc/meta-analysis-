@@ -53,3 +53,5 @@ metabias(metap1, method="rank")
 metabias(metap1, method="rank")
 #trim-and-fill method
 tf1 <- trimfill(metap1)
+#######
+#meta regression 
