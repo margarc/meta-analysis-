@@ -42,3 +42,14 @@ getwd()
 setwd("C:/Users/INSPIRON/Documents/Rch")
 onlyset <- read.csv("only21st.rda", as.is=TRUE)
 onlyset 
+#
+#
+#
+#
+#?
+#Begg and Mazumdar test rank correlation
+metabias(metap1, method="rank")
+#egger's test linear regression
+metabias(metap1, method="rank")
+#trim-and-fill method
+tf1 <- trimfill(metap1)
