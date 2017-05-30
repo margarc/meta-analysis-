@@ -28,3 +28,16 @@ funnel(mprev1)
 ##############################
 prevsepsis <- read.csv("withsepsis.rda", as.is=TRUE)
 prevsepsis
+metaprop(vddseps, totseps, studlab=paste(study), data=prevsepsis)
+mprevsepsis1 <- metaprop(vddseps, totseps, studlab=paste(study), data=prevsepsis)
+mprevsepsis1
+###############################
+#get forest plot fixed effect model:
+forest(mprevsepsis1, comb.random=FALSE, xlab= "proportion")
+#get random effects model forest plot:
+forest(mprevsepsis1, comb.fixed=FALSE, xlab= "proportion")
+funnel(mprevsepsis1)
+################################
+################################
+#MORTALITY
+#open file: mortadata.rda
