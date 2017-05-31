@@ -40,9 +40,11 @@ forest(mprevsepsis1, comb.random=FALSE, xlab= "proportion")
 #get random effects model forest plot:
 forest(mprevsepsis1, comb.fixed=FALSE, xlab= "proportion")
 funnel(mprevsepsis1)
-###
-###
-#  MORTALITY
+#
+# Can try using addtau2=TRUE to add between-study error.
+# Also can try: funnel(trimfill(result.rd))
+#
+# MORTALITY
 # open file: mortaldata.rda
 mortality <- read.csv("mortaldata.rda", as.is=TRUE)
 mortality
