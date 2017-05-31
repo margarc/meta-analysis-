@@ -54,10 +54,13 @@ forest(metamortal, comb.fixed=FALSE, xlab= "odds ratio")
 forest(metamortal, comb.random=FALSE, xlab= "odds ratio")
 #get funnel plot
 funnel(metamortal)
-#to do:
-####
-#senstivity analysis: high qualiy studies only prevalence
-#sens analysis for prevalence in those 21 studies that reported vdd under our set threshold <20ng/ml
-#sample size of study >=150 versus <150 
-#cont here
+#to do: 
+#the following ensitivity analyses 
+#for prevalence of: high qualiy studies only (>=7 starts) and low quality (<7 stars)
+#
+#for prevalence in those 21 studies that reported vdd under our set threshold <20ng/ml
+#
+#for sample size of study >=150 versus <150 
+#
+#for papers that have common assay methods?! this was not done before so check 
 
