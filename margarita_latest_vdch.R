@@ -1,4 +1,5 @@
 getwd()
+# always check the working directory & change if needed
 setwd("C:/Users/INSPIRON/Documents/Rch")
 # MAIN ANALYSES
 # prevalence
@@ -54,7 +55,7 @@ metabin(Eedeaddef, Nealldef, Ecdeadnodef, Ncallnondef, sm= "OR", method="I", dat
 metamortal <- metabin(Eedeaddef, Nealldef, Ecdeadnodef, Ncallnondef, sm= "OR", method="I", data=mortality, studlab=study)
 metamortal
 forest(metamortal, comb.fixed=FALSE, xlab= "odds ratio")
-# yes why xlab= proportion in the other analysis? clarify
+# why xlab= proportion in the other analysis? clarify
 # same to get fixed effect model result:
 forest(metamortal, comb.random=FALSE, xlab= "odds ratio")
 # get funnel plot
@@ -62,7 +63,26 @@ funnel(metamortal)
 # to do: 
 # the following sensitivity analyses 
 # for prevalence of: high qualiy studies only (>=7 starts) and low quality (<7 stars)
+prevhighqual <- read.csv("highquality.rda", as.is=TRUE)
+# then see the data:
+prevhighqual
+library(meta)
+metaprop(vdd, totch, studlab=paste(study), data=prevhighqual)
+# RESULT:
+# Number of studies combined: k = 5
 #
+#                    proportion    95%-CI        z  p-value
+# Fixed effect model       0.5991 [0.5532; 0.6433] --       --
+# Random effects model     0.6602 [0.4936; 0.7948] --       --
+#
+# Quantifying heterogeneity:
+# tau^2 = 0.5617; H = 3.57 [2.56; 4.99]; I^2 = 92.2% [84.7%; 96.0%]
+# Test of heterogeneity:
+#    Q d.f.  p-value
+#     51.03    4 < 0.0001
+
+
+
 # for prevalence in those 21 studies that reported vdd under our set threshold <20ng/ml
 #
 # for sample size of study >=150 versus <150 
