@@ -82,7 +82,6 @@ metaprop(vdd, totch, studlab=paste(study), data=prevhighqual)
 #     51.03    4 < 0.0001
 
 
-
 # for prevalence in those 21 studies that reported vdd under our set threshold <20ng/ml
 #
 # for sample size of study >=150 versus <150 
