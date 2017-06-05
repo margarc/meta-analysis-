@@ -2,16 +2,28 @@ getwd()
 # always check the working directory & change if needed
 setwd("C:/Users/INSPIRON/Documents/Rch")
 # MAIN ANALYSES
-# prevalence
+#
+# PREVALENCE
 prevalencedata <- read.csv("prevalence.rda", as.is=TRUE)
 #type: prevalencedata to view the data
 prevalencedata
 library(meta)
 #library(meta) will load the package
 metaprop(vddch, totch, studlab=paste(study), data = prevalencedata)
-# write the results
+# write the results:
+# Number of studies combined: k = 25
 #
+#                        proportion          95%-CI              z  p-value
+# Fixed effect model       0.4837        [0.4650; 0.5025]        --       --
+# Random effects model     0.5519        [0.4533; 0.6466]        --       --
 #
+# Quantifying heterogeneity:
+# tau^2 = 0.9211; H = 5.00 [4.46; 5.60]; I^2 = 96.0% [95.0%; 96.8%]
+#
+# Test of heterogeneity:
+#      Q       d.f.              p-value
+#   598.87     24                 < 0.0001
+#--------------------------------------------------------------------------------------------------------
 # name this: mprev1
 mprev1 <- metaprop(vddch, totch, studlab=paste(study), data = prevalencedata)
 # test it below
@@ -20,22 +32,20 @@ mprev1
 forest(mprev1, comb.fixed=FALSE, xlab= "proportion")
 # the above for the random effects model
 # repeat to get the fixed effect model
-###
+#
 forest(mprev1, comb.random=FALSE, xlab= "proportion")
-###
-###
+#
 #now produce the funnel plot:
 funnel(mprev1)
-###
-###
+#
 # Subgroup analyseis: children with sepsis
-###
+#
 prevsepsis <- read.csv("withsepsis.rda", as.is=TRUE)
 prevsepsis
 metaprop(vddseps, totseps, studlab=paste(study), data=prevsepsis)
 mprevsepsis1 <- metaprop(vddseps, totseps, studlab=paste(study), data=prevsepsis)
 mprevsepsis1
-###
+#
 #get forest plot fixed effect model:
 forest(mprevsepsis1, comb.random=FALSE, xlab= "proportion")
 #get random effects model forest plot:
@@ -44,7 +54,7 @@ funnel(mprevsepsis1)
 #
 # Can try using addtau2=TRUE to add between-study error.
 # Also can try: funnel(trimfill(result.rd))
-#
+#--------------------------------------------------------------------------------------------------------------------
 # MORTALITY
 # open file: mortaldata.rda
 mortality <- read.csv("mortaldata.rda", as.is=TRUE)
