@@ -51,7 +51,20 @@ mortality <- read.csv("mortaldata.rda", as.is=TRUE)
 mortality
 metabin(Eedeaddef, Nealldef, Ecdeadnodef, Ncallnondef, sm= "OR", method="I", data=mortality, studlab=study)
 # check the above cz random&fixed give same results
-###
+#RESULTS:
+# Number of studies combined: k = 11
+#
+#                         OR           95%-CI    z  p-value
+# Fixed effect model   1.2284 [0.7964; 1.8945] 0.93   0.3522 
+# Random effects model 1.2284 [0.7964; 1.8945] 0.93   0.3522
+# Random & fixed same for mortality in critically ill children ...
+#
+# Quantifying heterogeneity:
+# tau^2 = 0; H = 1.00 [1.00; 1.53]; I^2 = 0.0% [0.0%; 57.2%]
+#
+# Test of heterogeneity:
+#    Q       d.f.        p-value
+#   9.30     10          0.5039
 metamortal <- metabin(Eedeaddef, Nealldef, Ecdeadnodef, Ncallnondef, sm= "OR", method="I", data=mortality, studlab=study)
 metamortal
 forest(metamortal, comb.fixed=FALSE, xlab= "odds ratio")
@@ -80,11 +93,10 @@ metaprop(vdd, totch, studlab=paste(study), data=prevhighqual)
 # Test of heterogeneity:
 #    Q d.f.  p-value
 #     51.03    4 < 0.0001
-
-
+#
 # for prevalence in those 21 studies that reported vdd under our set threshold <20ng/ml
 #
 # for sample size of study >=150 versus <150 
 #
-# for papers that have common assay methods?! this was not done before so check 
+# for papers that have common assay methods?!  this was not done before so check 
 
