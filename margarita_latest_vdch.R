@@ -54,6 +54,21 @@ funnel(mprevsepsis1)
 #
 # Can try using addtau2=TRUE to add between-study error.
 # Also can try: funnel(trimfill(result.rd))
+# --------------------------------------------------------------------------------------------------------
+# NOTES WE ADDED see below: 
+# library(meta) will load the package
+?metaprop
+# TRY: prev_arc <- metaprop(vddch, totch, studlab=paste(study), data = prevalencedata, sm = "PAS")
+# TRY: prev_logit <- metaprop(vddch, totch, studlab=paste(study), data = prevalencedata, sm = "PLOGIT")
+# prev_arc
+# str(prev_arc)
+# head(prev_arc)
+# prev_arc$event
+# prev_arc$n
+# prev_arc$method.ci
+# summary(prev_arc)
+# summary(prev_logit)
+#
 #--------------------------------------------------------------------------------------------------------------------
 # MORTALITY
 # open file: mortaldata.rda
