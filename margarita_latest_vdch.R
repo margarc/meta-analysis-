@@ -34,7 +34,9 @@ forest(mprev1, comb.fixed=FALSE, xlab= "proportion")
 # repeat to get the fixed effect model
 #
 forest(mprev1, comb.random=FALSE, xlab= "proportion")
-#
+
+#Q: should x axes be labelled as "proportion" or "prevalence 95% CI") ???
+
 #now produce the funnel plot:
 funnel(mprev1)
 #
