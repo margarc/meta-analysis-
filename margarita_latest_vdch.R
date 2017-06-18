@@ -177,5 +177,21 @@ metaprop(vddch, totch, studlab=paste(study), data=sslarge, sm = "PLOGIT")
 # Test of heterogeneity:
 #      Q       d.f.       p-value
       346.52    7        < 0.0001
+# sample size <150 
+ssmall <- read.csv("ssbelow150.rda", as.is=TRUE)
+View(ssmall)
+metaprop(vddch, totch, studlab=paste(study), data=ssmall, sm = "PLOGIT")
+# RESULTS sample size <150 
+# Number of studies combined: k = 17
+#                    proportion           95%-CI  z  p-value
+# Fixed effect model       0.5465 [0.5130; 0.5795] --       --
+# Random effects model     0.6024 [0.4705; 0.7209] --       --
+# Quantifying heterogeneity:
+tau^2 = 1.1189; H = 3.81 [3.24; 4.49]; I^2 = 93.1% [90.5%; 95.0%]
+Test of heterogeneity:
+      Q d.f.  p-value
+ 232.80   16 < 0.0001
+
+
 # for papers that have common assay methods?!  this was not done before so check 
 
