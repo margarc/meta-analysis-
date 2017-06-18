@@ -131,15 +131,37 @@ metaprop(vdd, tot, studlab=paste(study), data=highqual)
 metaprop(vdd, tot, studlab=paste(study), data =highqual, sm = "PAS")
 # now try with PLOGIT i.e. logit transformation that is the default
 metaprop(vdd, tot, studlab=paste(study), data =highqual, sm = "PLOGIT")
+# Result HIGH QUALITY
+# Number of studies combined: k = 10
+#
+#                         proportion      95%-CI      z  p-value
+# Fixed effect model       0.5638         [0.5225;    0.6042] --       --
+# Random effects model     0.6464         [0.4625;    0.7953] --       --
+# Quantifying heterogeneity:
+# tau^2 = 1.3142; H = 4.24 [3.46; 5.21]; I^2 = 94.4% [91.7%; 96.3%]
+# Test of heterogeneity:
+#     Q           d.f.           p-value
+#    162.14        9            < 0.0001
 # the above two ("PAS" vs "PLOGIT" give different results which one to use? default for proportions no?
 ? `meta-package`
 ?metaprop
 # sm: A character string indicating which summary measure ("PFT", "PAS", "PRAW", "PLN", or "PLOGIT") 
 # is to be used for pooling of studies, see Details.
-# 
+#  LOW QUALITY
+metaprop(vddch, totch, studlab=paste(study), data=lowquality, sm = "PLOGIT")
+# Results
+# Number of studies combined: k = 15
+#                        proportion           95%-CI       z  p-value
+# Fixed effect model       0.4632         [0.4423; 0.4842]   --       --
+# Random effects model     0.4941         [0.3760; 0.6129]    --       --
+#
+# Quantifying heterogeneity:
+# tau^2 = 0.8492; H = 5.47 [4.75; 6.29]; I^2 = 96.7% [95.6%; 97.5%]
+# Test of heterogeneity:
+#    Q              d.f.       p-value
+#  418.70            14        < 0.0001
+#----------------------------------------------------------------------
 # for prevalence in those 21 studies that reported vdd under our set threshold <20ng/ml
-#
 # for sample size of study >=150 versus <150 
-#
 # for papers that have common assay methods?!  this was not done before so check 
 
