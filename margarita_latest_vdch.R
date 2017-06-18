@@ -161,8 +161,6 @@ metaprop(vddch, totch, studlab=paste(study), data=lowquality, sm = "PLOGIT")
 #    Q              d.f.       p-value
 #  418.70            14        < 0.0001
 #----------------------------------------------------------------------
-# for prevalence in those 21 studies that reported vdd under our set threshold <20ng/ml
-# for sample size of study >=150 versus <150 
 # sample size >=150
 sslarge <- read.csv("ssabove150.rda", as.is=TRUE)
 View(sslarge)
@@ -191,6 +189,22 @@ tau^2 = 1.1189; H = 3.81 [3.24; 4.49]; I^2 = 93.1% [90.5%; 95.0%]
 Test of heterogeneity:
       Q d.f.  p-value
  232.80   16 < 0.0001
+# prevalence in those 21 studies that reported vdd <=50 nmol/L (20ng/ml i.e. the set threshold); excluding the 4 which used thresholds: 
+# <=40 and <=37.4 nmol/L 
+cutoff50 <- read.csv("cutoff.rda", as.is=TRUE)
+View(cutoff50)
+metaprop(vddch, totch, studlab=paste(study), data=cutoff50, sm = "PLOGIT")
+# RESULTS
+# Number of studies combined: k = 21
+#                   proportion           95%-CI           z      p-value
+# Fixed effect model       0.5019          [0.4823; 0.5215]    --       --
+# Random effects model     0.5932          [0.4890; 0.6897]    --       --
+#
+# Quantifying heterogeneity:
+# tau^2 = 0.8891; H = 5.12 [4.53; 5.78]; I^2 = 96.2% [95.1%; 97.0%]
+# Test of heterogeneity:
+#      Q      d.f.    p-value
+#    523.68   20      < 0.0001
 
 
 # for papers that have common assay methods?!  this was not done before so check 
