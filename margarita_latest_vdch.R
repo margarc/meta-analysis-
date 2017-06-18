@@ -163,5 +163,19 @@ metaprop(vddch, totch, studlab=paste(study), data=lowquality, sm = "PLOGIT")
 #----------------------------------------------------------------------
 # for prevalence in those 21 studies that reported vdd under our set threshold <20ng/ml
 # for sample size of study >=150 versus <150 
+# sample size >=150
+sslarge <- read.csv("ssabove150.rda", as.is=TRUE)
+View(sslarge)
+metaprop(vddch, totch, studlab=paste(study), data=sslarge, sm = "PLOGIT")
+# RESULTS sample size >=150 
+# Number of studies combined: k = 8
+#                     proportion           95%-CI             z  p-value
+# Fixed effect model       0.4553         [0.4329; 0.4778]     --       --
+# Random effects model     0.4571         [0.3051; 0.6175]     --       --
+# Quantifying heterogeneity:
+# tau^2 = 0.8609; H = 7.04 [5.95; 8.33]; I^2 = 98.0% [97.2%; 98.6%]
+# Test of heterogeneity:
+#      Q       d.f.       p-value
+      346.52    7        < 0.0001
 # for papers that have common assay methods?!  this was not done before so check 
 
