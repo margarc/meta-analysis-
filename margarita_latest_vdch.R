@@ -1,4 +1,10 @@
 getwd()
+# or use source() like this e.g.  source("https://link.R")
+# source {base} 
+# source causes R to accept its input from a named file or URL or expressions or connections directly. 
+# Input is read and parsed from that file until the end of that file is reached, then the parsed expressions are evaluated in order in 
+# that chosen environment 
+#
 # always check the working directory & change if needed
 setwd("C:/Users/INSPIRON/Documents/Rch")
 # MAIN ANALYSES
