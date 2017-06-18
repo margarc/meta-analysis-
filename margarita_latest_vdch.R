@@ -120,7 +120,23 @@ metaprop(vdd, totch, studlab=paste(study), data=prevhighqual)
 # Test of heterogeneity:
 #    Q d.f.  p-value
 #     51.03    4 < 0.0001
+# "High" vs "Low" quality studies: 
 #
+highqual <- read.csv("highq.rda", as.is=TRUE)
+highqual
+View(highqual)
+library(meta)
+metaprop(vdd, tot, studlab=paste(study), data=highqual)
+# try with summary measure as: "PAS" i.e. arcsine transformation
+metaprop(vdd, tot, studlab=paste(study), data =highqual, sm = "PAS")
+# now try with PLOGIT i.e. logit transformation that is the default
+metaprop(vdd, tot, studlab=paste(study), data =highqual, sm = "PLOGIT")
+# the above two ("PAS" vs "PLOGIT" give different results which one to use? default for proportions no?
+? `meta-package`
+?metaprop
+# sm: A character string indicating which summary measure ("PFT", "PAS", "PRAW", "PLN", or "PLOGIT") 
+# is to be used for pooling of studies, see Details.
+# 
 # for prevalence in those 21 studies that reported vdd under our set threshold <20ng/ml
 #
 # for sample size of study >=150 versus <150 
