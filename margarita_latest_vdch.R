@@ -238,6 +238,18 @@ funnel(meta2$TE, meta2$seTE, sm= "OR", comb.fixed =TRUE, level=0.95)
 #Radial plot -maybe this not needed 
 radial(meta2, level=0.95)
 ##
-# use: metabias to test for funnel plot asymmetry
+# use: metabias to test for funnel plot asymmetry for mortality outcome!
 ?metabias
+# rank correlation test of funnel plot asymmetry: 
 metabias(meta2, method.bias = "rank")
+# data:  meta2
+# z = 2.4133, p-value = 0.01581
+# alternative hypothesis: asymmetry in funnel plot
+# sample estimates:
+#     ks         se.ks 
+#  31.00000      12.84523 
+# So if alpha 0.05 is used as the cut-off for significance, then here 0.01 is < 0.05 so the null hypothesis is rejected and alternative 
+# is accepted i.e. that funnel plot is asymmetric.
+#
+# Rank correlation test of funnel plot asymmetry (with continuity correction)
+metabias(meta2, method.bias="rank", correct=TRUE)
