@@ -232,3 +232,6 @@ metabin(defdead, alldef, nodefdead, allnotdef, studlab=study, data=mortalch, met
 # Test of heterogeneity:
 #    Q         d.f.        p-value
  #   9.30      10           0.5039
+# Funnel plot (for mortality)
+funnel(meta2, sm= "OR", comb.fixed =TRUE, level=0.95)
+funnel(meta2$TE, meta2$seTE, sm= "OR", comb.fixed =TRUE, level=0.95)
