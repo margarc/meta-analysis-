@@ -235,3 +235,5 @@ metabin(defdead, alldef, nodefdead, allnotdef, studlab=study, data=mortalch, met
 # Funnel plot (for mortality)
 funnel(meta2, sm= "OR", comb.fixed =TRUE, level=0.95)
 funnel(meta2$TE, meta2$seTE, sm= "OR", comb.fixed =TRUE, level=0.95)
+#Radial plot -maybe this not needed 
+radial(meta2, level=0.95)
