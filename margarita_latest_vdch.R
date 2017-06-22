@@ -253,3 +253,6 @@ metabias(meta2, method.bias = "rank")
 #
 # Rank correlation test of funnel plot asymmetry (with continuity correction)
 metabias(meta2, method.bias="rank", correct=TRUE)
+#
+# The xlab option is used to label the x-axis: e.g. xlab= "xxxxxxxx units xxxx" 
+# xlim=c( X, Y) used to specifiy limits of the x-axis e.g. xlim=c(-50, 10) means that limits are between -50 and 10 
