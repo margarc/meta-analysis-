@@ -235,9 +235,13 @@ metabin(defdead, alldef, nodefdead, allnotdef, studlab=study, data=mortalch, met
 # Funnel plot (for mortality)
 funnel(meta2, sm= "OR", comb.fixed =TRUE, level=0.95)
 funnel(meta2$TE, meta2$seTE, sm= "OR", comb.fixed =TRUE, level=0.95)
-#Radial plot -maybe this not needed 
+#
+# Radial plot -maybe this not needed 
+# Radial or Galbraith plot it is the alternative of the forest plot [logOR] 
+# Horizontal axis: 1/standard error
+# Vertical axis: effect divided by standard error 
 radial(meta2, level=0.95)
-##
+#
 # use: metabias to test for funnel plot asymmetry for mortality outcome!
 ?metabias
 # rank correlation test of funnel plot asymmetry: 
