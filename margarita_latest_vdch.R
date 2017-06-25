@@ -254,7 +254,7 @@ metabias(meta2, method.bias = "rank")
 #  31.00000      12.84523 
 # So if alpha 0.05 is used as the cut-off for significance, then here 0.01 is < 0.05 so the null hypothesis is rejected and alternative 
 # is accepted i.e. that funnel plot is asymmetric.
-#
+##
 # Rank correlation test of funnel plot asymmetry (with continuity correction)
 metabias(meta2, method.bias="rank", correct=TRUE)
 #
