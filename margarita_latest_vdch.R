@@ -260,3 +260,5 @@ metabias(meta2, method.bias="rank", correct=TRUE)
 #
 # The xlab option is used to label the x-axis: e.g. xlab= "xxxxxxxx units xxxx" 
 # xlim=c( X, Y) used to specifiy limits of the x-axis e.g. xlim=c(-50, 10) means that limits are between -50 and 10 
+
+# Find this paper: The arcsine is asinine: the analysis of proportions in ecology. Warton DI1, Hui FK.
