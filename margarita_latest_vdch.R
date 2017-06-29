@@ -342,3 +342,13 @@ metaprop(vddseps, totseps, studlab=(study), data=checkseps, sm = "PLOGIT")
 - Clopper-Pearson confidence interval for individual studies
 - Continuity correction of 0.5 in studies with zero cell frequencies
 # PLOGIT and PAS give similar results here as well 
+#
+#
+# What about detecting publication bias?
+# Which one is more appropriate in our case?
+# Detection of biases
+•	Egger’s linear regression method
+•	Begg and Mazumdar’s rank correlation method 
+•	The Duval and Tweedie’s trim and fill method, on meta-analysis of continuous data.
+
+A Comparison of Methods to Detect Publication Bias for Meta-analysis of Continuous Data
