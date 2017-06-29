@@ -4,7 +4,7 @@ getwd()
 # source causes R to accept its input from a named file or URL or expressions or connections directly. 
 # Input is read and parsed from that file until the end of that file is reached, then the parsed expressions are evaluated in order in 
 # that chosen environment 
-#
+# What is the best way to save files? .rda or no <<-----------------
 # always check the working directory & change if needed
 setwd("C:/Users/INSPIRON/Documents/Rch")
 # MAIN ANALYSES
@@ -266,3 +266,5 @@ metabias(meta2, method.bias="rank", correct=TRUE)
 # Arcsine transformation (sm="PAS")
 # Logit transformation (sm="PLOGIT", default)
 # Log transformation (sm="PLN")--> what about this?! 
+# Meta-analysis of proportions With default i.e. "PLOGIT"
+# 
