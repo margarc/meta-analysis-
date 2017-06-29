@@ -263,3 +263,6 @@ metabias(meta2, method.bias="rank", correct=TRUE)
 
 # Find this paper: The arcsine is asinine: the analysis of proportions in ecology. Warton DI1, Hui FK. ok
 # Check differences when using arcsine vs logit 
+# Arcsine transformation (sm="PAS")
+# Logit transformation (sm="PLOGIT", default)
+# Log transformation (sm="PLN")--> what about this?! 
