@@ -260,7 +260,8 @@ metabias(meta2, method.bias="rank", correct=TRUE)
 #
 # The xlab option is used to label the x-axis: e.g. xlab= "xxxxxxxx units xxxx" 
 # xlim=c( X, Y) used to specifiy limits of the x-axis e.g. xlim=c(-50, 10) means that limits are between -50 and 10 
-
+----------------------------------------------------------------------------------------------------------------
+# 29th June 
 # Find this paper: The arcsine is asinine: the analysis of proportions in ecology. Warton DI1, Hui FK. ok
 # Check differences when using arcsine vs logit 
 # Arcsine transformation (sm="PAS")
@@ -268,7 +269,8 @@ metabias(meta2, method.bias="rank", correct=TRUE)
 # Log transformation (sm="PLN")--> what about this?! 
 # Meta-analysis of proportions With default i.e. "PLOGIT"
 #
-#
+-------------------------------------------------------------------------------------------
+## Check for prevalence of vitamin D deficiency in all critically ill children 
 checking <- read.csv("prevtrial.rda", as.is=TRUE)
 check <- read.csv("trialprev.rda", as.is=TRUE)
 check 
@@ -276,7 +278,7 @@ View(check)
 library(meta)
 # Try with Arcsine transformation (sm="PAS") first 
 metaprop(vddch, totch, studlab=(study), data=check, sm = "PAS")
-# Result:
+# RESULT: 
 # Number of studies combined: k = 25
 #                        proportion           95%-CI          z          p-value
 # Fixed effect model       0.4950       [0.4784; 0.5116]      --                --
@@ -286,3 +288,56 @@ metaprop(vddch, totch, studlab=(study), data=check, sm = "PAS")
 # Test of heterogeneity:
 #      Q       d.f.            p-value
 #    928.95    24             < 0.0001
+-------------------------------------------------------------------------------------------
+# Now try with Logit transformation (sm="Logit")
+metaprop(vddch, totch, studlab=(study), data=check, sm = "PLOGIT")
+# RESULT:
+# Number of studies combined: k = 25
+#                         proportion           95%-CI         z         p-value
+# Fixed effect model       0.4837          [0.4650; 0.5025]   --         --
+# Random effects model     0.5519          [0.4533; 0.6466]   --         --
+
+Quantifying heterogeneity:
+tau^2 = 0.9211; H = 5.00 [4.46; 5.60]; I^2 = 96.0% [95.0%; 96.8%]
+
+Test of heterogeneity:
+      Q d.f.  p-value
+ 598.87   24 < 0.0001
+
+# so PLOGIT and PAS give similar results in this case 
+----------------------------------------------------------------------------------
+# Check for prevalence of vitamin D deficiency in critically ill children WITH SEPSIS 
+# Try with Arcsine transformation (sm="PAS") first 
+metaprop(vddseps, totseps, studlab=(study), data=checkseps, sm = "PAS")
+# RESULTS
+# Number of studies combined: k = 9
+#                       proportion           95%-CI         z                p-value
+# Fixed effect model       0.7009        [0.6528; 0.7468]   --                  --
+# Random effects model     0.6982        [0.5368; 0.8377]   --                  --
+#
+# Quantifying heterogeneity:
+# tau^2 = 0.0546; H = 3.05 [2.35; 3.97]; I^2 = 89.3% [81.9%; 93.7%]
+# Test of heterogeneity:
+#     Q     d.f.         p-value
+#   74.62     8           < 0.0001
+-------------------------------------------------------------------------------------------------------------
+# Repeat with logit transformation 
+metaprop(vddseps, totseps, studlab=(study), data=checkseps, sm = "PLOGIT")
+# RESULTS:
+# Number of studies combined: k = 9
+#                         proportion           95%-CI               z            p-value
+# Fixed effect model       0.6690        [0.6129; 0.7208]          --               --
+# Random effects model     0.6818        [0.5207; 0.8087]          --               --
+#
+# Quantifying heterogeneity:
+# tau^2 = 0.8278; H = 2.56 [1.92; 3.42]; I^2 = 84.7% [72.8%; 91.4%]
+#
+# Test of heterogeneity:
+#     Q d.f.  p-value
+# 52.43    8 < 0.0001
+# Details on meta-analytical method:
+- Inverse variance method
+- DerSimonian-Laird estimator for tau^2
+- Logit transformation
+- Clopper-Pearson confidence interval for individual studies
+- Continuity correction of 0.5 in studies with zero cell frequencies
