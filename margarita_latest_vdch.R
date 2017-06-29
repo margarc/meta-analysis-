@@ -313,7 +313,7 @@ metaprop(vddseps, totseps, studlab=(study), data=checkseps, sm = "PAS")
 # Number of studies combined: k = 9
 #                       proportion           95%-CI         z                p-value
 # Fixed effect model       0.7009        [0.6528; 0.7468]   --                  --
-# Random effects model     0.6982        [0.5368; 0.8377]   --                  --
+# Random effects model     0.6982        [0.5368; 0.8377]   --                  -- 
 #
 # Quantifying heterogeneity:
 # tau^2 = 0.0546; H = 3.05 [2.35; 3.97]; I^2 = 89.3% [81.9%; 93.7%]
@@ -341,3 +341,4 @@ metaprop(vddseps, totseps, studlab=(study), data=checkseps, sm = "PLOGIT")
 - Logit transformation
 - Clopper-Pearson confidence interval for individual studies
 - Continuity correction of 0.5 in studies with zero cell frequencies
+# PLOGIT and PAS give similar results here as well 
