@@ -267,4 +267,22 @@ metabias(meta2, method.bias="rank", correct=TRUE)
 # Logit transformation (sm="PLOGIT", default)
 # Log transformation (sm="PLN")--> what about this?! 
 # Meta-analysis of proportions With default i.e. "PLOGIT"
-# 
+#
+#
+checking <- read.csv("prevtrial.rda", as.is=TRUE)
+check <- read.csv("trialprev.rda", as.is=TRUE)
+check 
+View(check)
+library(meta)
+# Try with Arcsine transformation (sm="PAS") first 
+metaprop(vddch, totch, studlab=(study), data=check, sm = "PAS")
+# Result:
+# Number of studies combined: k = 25
+#                        proportion           95%-CI          z          p-value
+# Fixed effect model       0.4950       [0.4784; 0.5116]      --                --
+# Random effects model     0.5492       [0.4433; 0.6529]      --                --
+# Quantifying heterogeneity:
+# tau^2 = 0.0698; H = 6.22 [5.64; 6.87]; I^2 = 97.4% [96.9%; 97.9%]
+# Test of heterogeneity:
+#      Q       d.f.            p-value
+#    928.95    24             < 0.0001
