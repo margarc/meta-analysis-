@@ -357,9 +357,9 @@ metaprop(vddseps, totseps, studlab=(study), data=checkseps, sm = "PLOGIT")
 # confidence interval can be reported in a systematic review. It has been shown that the power of Begg and Mazumdar test is poor. 
 # Use the metabias functgion of the R package meta like this:
 # example: >metabias(ms1, method="rank")
-# Alternative hypothesis: aymetry in funnel plot. So if p-value is LESS than the predefined alpha value (e.g. 0.05) then we will reject 
+# Alternative hypothesis: asymmetry in funnel plot. So if p-value is LESS than the predefined alpha value (e.g. 0.05) then we will reject 
 # the null hypothesis so the conclusion in such a case will be: 
-# Rejecting the null hypothesis (of symmetry in the funnel plot) and and accepting the null hypothesis that indicates marked asymmetry 
+# Rejecting the null hypothesis (of symmetry in the funnel plot) and and accepting the alternative hypothesis that indicates marked asymmetry 
 # of the funnel plot.
 --------------------------------------------------------
 # *Egger's test: Linear regression test
@@ -374,3 +374,19 @@ metaprop(vddseps, totseps, studlab=(study), data=checkseps, sm = "PLOGIT")
 # example: >metabias (ms1, method="linreg")
 
 # A Comparison of Methods to Detect Publication Bias for Meta-analysis of Continuous Data
+# try it
+# mortal <- read.csv("mortcorrect.rda", as.is=TRUE)
+# mortal
+View(mortal)
+metabin(deaddef, alldef, deadnotdef, allnotdef, studlab=study, data=mortal, method="Inverse", sm= "OR")
+# now do the eggers test
+mort1 <- metabin(deaddef, alldef, deadnotdef, allnotdef, studlab=study, data=mortal, method="Inverse", sm= "OR")
+metabias(mort1, method="linreg")
+# RESULTS
+# Linear regression test of funnel plot asymmetry
+# data:  mort1
+# t = 3.927, df = 9, p-value = 0.003474
+# alternative hypothesis: asymmetry in funnel plot
+# sample estimates:
+#     bias   se.bias     slope 
+# 1.682775  0.428511 -0.905780 
