@@ -363,7 +363,8 @@ metaprop(vddseps, totseps, studlab=(study), data=checkseps, sm = "PLOGIT")
 # of the funnel plot.
 --------------------------------------------------------
 # *Egger's test: Linear regression test
-# This 
+# This was proposed by Egger et al [Paper Citation: Egger, M., Davey Smith, G., Schneider, M., & Minder, C. (1997). 
+# Bias in meta-analysis detected by a simple, graphical test. BMJ : British Medical Journal, 315(7109), 629–634.]
 
 
 
