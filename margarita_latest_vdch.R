@@ -356,7 +356,7 @@ metaprop(vddseps, totseps, studlab=(study), data=checkseps, sm = "PLOGIT")
 # The null hypotehsis of NO bias is rejected at the significance level alpha. Instead of conducting a statistical test, the Kendall's tau with (1 - a) 
 # confidence interval can be reported in a systematic review. It has been shown that the power of Begg and Mazumdar test is poor. 
 # Use the metabias functgion of the R package meta like this:
-# example: metabias(ms1, method="rank")
+# example: >metabias(ms1, method="rank")
 # Alternative hypothesis: aymetry in funnel plot. So if p-value is LESS than the predefined alpha value (e.g. 0.05) then we will reject 
 # the null hypothesis so the conclusion in such a case will be: 
 # Rejecting the null hypothesis (of symmetry in the funnel plot) and and accepting the null hypothesis that indicates marked asymmetry 
@@ -369,6 +369,8 @@ metaprop(vddseps, totseps, studlab=(study), data=checkseps, sm = "PLOGIT")
 # The appeoach is justified by the intuitive argument that in the presence of publication bias small studies with non-significant or negative results 
 # are less likely to be published. 
 # Null-hypothesis: no bias in a meta-analysis 
-
+# Assumption of test: Linearity still holds in the presence of bias
+# Again for this test use the metabias functgion of the R package meta like this:
+# example: >metabias (ms1, method="linreg")
 
 # A Comparison of Methods to Detect Publication Bias for Meta-analysis of Continuous Data
