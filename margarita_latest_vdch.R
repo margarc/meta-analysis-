@@ -350,5 +350,16 @@ metaprop(vddseps, totseps, studlab=(study), data=checkseps, sm = "PLOGIT")
 •	Egger’s linear regression method
 •	Begg and Mazumdar’s rank correlation method 
 •	The Duval and Tweedie’s trim and fill method, on meta-analysis of continuous data.
+#
+# *Begg and Mazumdar test: rank correlation test
+# This test is based on the correlation between a standardized treatment effect and within trial variance. 
+# The null hypotehsis of NO bias is rejected at the significance level alpha. Instead of conducting a statistical test, the Kendall's tau with (1 - a) 
+# confidence interval can be reported in a systematic review. It has been shown that the power of Begg and Mazumdar test is poor. 
+# Use the metabias functgion of the R package meta like this:
+# example: metabias(ms1, method="rank")
+# Alternative hypothesis: aymetry in funnel plot. So if p-value is LESS than the predefined alpha value (e.g. 0.05) then we will reject 
+# the null hypothesis so the conclusion in such a case will be: 
+# Rejecting the null hypothesis (of symmetry in the funnel plot and a
+
 
 A Comparison of Methods to Detect Publication Bias for Meta-analysis of Continuous Data
