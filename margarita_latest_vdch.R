@@ -343,7 +343,7 @@ metaprop(vddseps, totseps, studlab=(study), data=checkseps, sm = "PLOGIT")
 - Continuity correction of 0.5 in studies with zero cell frequencies
 # PLOGIT and PAS give similar results here as well 
 #
-#
+----------------------------------------------------------------------------------------------------------------
 # What about detecting publication bias?
 # Which one is more appropriate in our case?
 # Detection of biases
@@ -359,7 +359,12 @@ metaprop(vddseps, totseps, studlab=(study), data=checkseps, sm = "PLOGIT")
 # example: metabias(ms1, method="rank")
 # Alternative hypothesis: aymetry in funnel plot. So if p-value is LESS than the predefined alpha value (e.g. 0.05) then we will reject 
 # the null hypothesis so the conclusion in such a case will be: 
-# Rejecting the null hypothesis (of symmetry in the funnel plot and a
+# Rejecting the null hypothesis (of symmetry in the funnel plot) and and accepting the null hypothesis that indicates marked asymmetry 
+# of the funnel plot.
+--------------------------------------------------------
+# *Egger's test: Linear regression test
+# This 
+
 
 
 A Comparison of Methods to Detect Publication Bias for Meta-analysis of Continuous Data
