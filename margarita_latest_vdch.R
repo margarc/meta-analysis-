@@ -390,6 +390,7 @@ metabias(mort1, method="linreg")
 # sample estimates:
 #     bias   se.bias     slope 
 # 1.682775  0.428511 -0.905780 
-# * so in this case Eggers test shows a significant p-value (0.0035) which is less than 0.05 and thus this leads to rejecting the null hypothesis
-# of symmetry in the funnel plot.
+# * so in this case Eggers test shows a significant p-value (0.0035) which is less than 0.05 and thus this leads to rejecting the null 
+# hypothesis of symmetry in the funnel plot
+-------------------------------------------------------------------------------------------------------------------
 
