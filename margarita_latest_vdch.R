@@ -397,3 +397,4 @@ metabias(mort1, method="linreg")
 # Br. Med. J. 343, d4002 (2011). 
 # Funnel plot asymmetry wrongly equated with publication or other reporting biases.
 # Also known as "Small study effects"
+# Go to Notes-meta-analysis-other-/Graphs & info (more notes)
