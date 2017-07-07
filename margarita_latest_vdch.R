@@ -393,4 +393,7 @@ metabias(mort1, method="linreg")
 # * so in this case Eggers test shows a significant p-value (0.0035) which is less than 0.05 and thus this leads to rejecting the null 
 # hypothesis of symmetry in the funnel plot
 -------------------------------------------------------------------------------------------------------------------
-
+# See paper: Sterne et al 2011 "Recommendations for examining and interpreting funnel plot asymmetry in meta-analyses of randomised controlled trials."
+# Br. Med. J. 343, d4002 (2011). 
+# Funnel plot asymmetry wrongly equated with publication or other reporting biases.
+# Also known as "Small study effects"
