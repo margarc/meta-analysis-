@@ -4,5 +4,11 @@ generalisability of results*
 -age
 -country of origin (most frm middle & high income)
 
+
+Confounder (three criteria):
+1. Must be associated with the study exposure
+2. Must be a risk factor for a disease in the absence of the study exposure 
+3. Must NOT be a consequence of the exposure (i.e. not in the causal pathway between exposure and disease)
+
 # Baujat plot (what is this?) : a graph of the influence of individual studies on beta coefficients versus its relative contribution 
 # to the pooled heterogeneity estimate . . . 
