@@ -15,6 +15,7 @@ direction of the observed effect.
 
 Bias: Incorrect estimate of the measure of effect either toward or away from the null. 
 It will lead to inaccurate results. 
+Confounding can lead to bias 
 
 
 
