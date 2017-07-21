@@ -25,3 +25,8 @@ Confounding can lead to bias
 
 # Baujat plot (what is this?) : a graph of the influence of individual studies on beta coefficients versus its relative contribution 
 # to the pooled heterogeneity estimate . . . 
+
+----------------------------------------------------------------------------------------------------------------------------------
+Cox Proportional-Hazards Regression for Survival Data in R
+Survival analysis examines and models the time it takes for events to occur. Use the survival package in R to estimate Cox regressions.
+# Install "survival" package in R
