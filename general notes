@@ -29,4 +29,11 @@ Confounding can lead to bias
 ----------------------------------------------------------------------------------------------------------------------------------
 Cox Proportional-Hazards Regression for Survival Data in R
 Survival analysis examines and models the time it takes for events to occur. Use the survival package in R to estimate Cox regressions.
+Survival analysis typically examines the relationship of the survival distribution to covariates. Most
+commonly, this examination entails the specification of a linear-like model for the log hazard.
+
 # Install "survival" package in R
+# coxph Function
+> library(survival)
+> args(coxph)
+
