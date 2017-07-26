@@ -27,6 +27,7 @@ Confounding can lead to bias
 # to the pooled heterogeneity estimate . . . 
 
 Define heterogeneity: when there is more variation in the results than would be expected by chance alone. 
+>that could be the consequence of clinical or methodological variation
 ----------------------------------------------------------------------------------------------------------------------------------
 Cox Proportional-Hazards Regression for Survival Data in R
 Survival analysis examines and models the time it takes for events to occur. Use the survival package in R to estimate Cox regressions.
