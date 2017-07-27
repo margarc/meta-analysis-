@@ -1,4 +1,8 @@
 Dose-response analysis using R 
 
-Paper: Ritz C, Baty F, Streibig JC, Gerhard D (2015) Dose-Response Analysis Using R. PLoS ONE 10(12): e0146021. 
+From Paper: Ritz C, Baty F, Streibig JC, Gerhard D (2015) Dose-Response Analysis Using R. PLoS ONE 10(12): e0146021. 
 https://doi.org/10.1371/journal.pone.0146021
+# Dose-response models: regression models where the independent variable is usually referred
+to as the dose or concentration and the dependent variable is usually referred to as response or effect.
+e.g. plasma or serum selenium = independent variable
+     risk of advanced prostate cancer = dependent variable (for example presented by relative risks)
