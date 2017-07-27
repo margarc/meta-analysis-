@@ -25,9 +25,17 @@ Confounding can lead to bias
 
 # Baujat plot (what is this?) : a graph of the influence of individual studies on beta coefficients versus its relative contribution 
 # to the pooled heterogeneity estimate . . . 
-
+----------------------------------------------------------------------------------------------------------------------------------
 Define heterogeneity: when there is more variation in the results than would be expected by chance alone. 
 >that could be the consequence of: clinical, methodological or statistical variation
+
+How to check for it? 
+>Visually: forest plot how much do individual studies overlap with each other and the summary effect 
+>Stats tests: chi squared tests for heterogeneity (Cochran Q test): Tests whether the individual effects are farther away from the
+common effect, beyond what is expected by chance
+> I-squared: % of total variability in effect measure that is attributable to heterogeneity (i.e. not to chance)
+
+
 ----------------------------------------------------------------------------------------------------------------------------------
 Cox Proportional-Hazards Regression for Survival Data in R
 Survival analysis examines and models the time it takes for events to occur. Use the survival package in R to estimate Cox regressions.
