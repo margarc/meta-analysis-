@@ -366,7 +366,7 @@ metaprop(vddseps, totseps, studlab=(study), data=checkseps, sm = "PLOGIT")
 # This was proposed by Egger et al [Paper Citation: Egger, M., Davey Smith, G., Schneider, M., & Minder, C. (1997). 
 # Bias in meta-analysis detected by a simple, graphical test. BMJ : British Medical Journal, 315(7109), 629–634.]
 # This test is based in a simple linear regression 
-# The appeoach is justified by the intuitive argument that in the presence of publication bias small studies with non-significant or negative results 
+# The approach is justified by the intuitive argument that in the presence of publication bias small studies with non-significant or negative results 
 # are less likely to be published. 
 # Null-hypothesis: no bias in a meta-analysis 
 # Assumption of test: Linearity still holds in the presence of bias
