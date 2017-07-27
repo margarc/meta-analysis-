@@ -29,13 +29,19 @@ Confounding can lead to bias
 Define heterogeneity: when there is more variation in the results than would be expected by chance alone. 
 >that could be the consequence of: clinical, methodological or statistical variation
 
-How to check for it? 
+*How to check for it? 
 >Visually: forest plot how much do individual studies overlap with each other and the summary effect 
 >Stats tests: chi squared tests for heterogeneity (Cochran Q test): Tests whether the individual effects are farther away from the
 common effect, beyond what is expected by chance
 > I-squared: % of total variability in effect measure that is attributable to heterogeneity (i.e. not to chance)
 
+Fixed effects model: Inverse-variance, Peto method, M-H method
+-Assumes there is no statistical heterogeneity among the studies
 
+Random effects model: DerSimonian & Laird method
+-Allows for random error plus inter-study variability
+-Studies tend to be weighted more equally (relatively more weight is
+given to smaller studies)
 ----------------------------------------------------------------------------------------------------------------------------------
 Cox Proportional-Hazards Regression for Survival Data in R
 Survival analysis examines and models the time it takes for events to occur. Use the survival package in R to estimate Cox regressions.
