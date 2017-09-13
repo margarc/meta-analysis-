@@ -379,9 +379,11 @@ metaprop(vddseps, totseps, studlab=(study), data=checkseps, sm = "PLOGIT")
 # mortal
 View(mortal)
 metabin(deaddef, alldef, deadnotdef, allnotdef, studlab=study, data=mortal, method="Inverse", sm= "OR")
-# now do the eggers test
+
+# now do the eggers test:
 mort1 <- metabin(deaddef, alldef, deadnotdef, allnotdef, studlab=study, data=mortal, method="Inverse", sm= "OR")
 metabias(mort1, method="linreg")
+
 # RESULTS
 # Linear regression test of funnel plot asymmetry
 # data:  mort1
@@ -391,7 +393,7 @@ metabias(mort1, method="linreg")
 #     bias   se.bias     slope 
 # 1.682775  0.428511 -0.905780 
 # * so in this case Eggers test shows a significant p-value (0.0035) which is less than 0.05 and thus this leads to rejecting the null 
-# hypothesis of symmetry in the funnel plot
+# hypothesis of symmetry in the funnel plot; so asymmetric (evid of publ bias!)
 -------------------------------------------------------------------------------------------------------------------
 # See paper: Sterne et al 2011 "Recommendations for examining and interpreting funnel plot asymmetry in meta-analyses of randomised controlled trials."
 # Br. Med. J. 343, d4002 (2011). 
