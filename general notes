@@ -53,3 +53,8 @@ commonly, this examination entails the specification of a linear-like model for 
 > library(survival)
 > args(coxph)
 ----------------------------------------------------------------------------------------------------------------------------------
+Funnel plots to examine bias in meta-analysis note:
+
+Relative measures of treatment effect (risk ratio or odds ratios) are plotted on a logarithmic scale. 
+This is important to ensure that effectsn of the same magnitude but opposite directions for example risk ratios of 0.5 and 2 
+are equidistant from 1 (corresponding to no effect).
