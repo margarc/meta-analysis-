@@ -52,4 +52,4 @@ commonly, this examination entails the specification of a linear-like model for 
 # coxph Function
 > library(survival)
 > args(coxph)
-
+----------------------------------------------------------------------------------------------------------------------------------
