@@ -21,3 +21,4 @@ Random
 -> Different mean ES, between-study variance
 Mixed
 -> Study-level regression for mean ES
+*The Random effects model can be used to infer what would likely happen if a new study were performed, the FE model cannot
