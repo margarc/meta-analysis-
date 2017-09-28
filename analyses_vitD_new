@@ -3,3 +3,4 @@ Peto and Mantel-Haenszel methods aren't appropriate for prevalence.
 1. Obtain raw proportions and sample sizes (cases) from each paper. 
 2. Calculating confidence intervals binomial wilson
 3. Transform the proportions using the Freeman Turkey method (arcsin).
+Install packages: meta ((Author: Guido Schwarzer); metafor ((Author: Wolfgang Viechtbauer); rmeta ( (Author: Thomas Lumley). 
