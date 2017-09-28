@@ -14,3 +14,10 @@ endpoints: arguments or formula containing endpoint values
 variances: arguments containing endpoint variances 
 measure: character value indicating type of ES 
 data: data frame containing named variables
+Modeling Approaches
+Fixed
+-> Same mean ES, zero between-study variance
+Random
+-> Different mean ES, between-study variance
+Mixed
+-> Study-level regression for mean ES
