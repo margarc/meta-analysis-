@@ -7,3 +7,10 @@ Peto and Mantel-Haenszel methods aren't appropriate for prevalence.
 "An effect size could be almost any summary statistic (e.g. a mean, a difference in proportions, an adjusted odds ratio, etc.)
 Conventional meta-analytic models assume normality of ESs. Because of the CLT, this will holds for most ESs given large enough samples.
 To normalize ESs: a log-transform is common.
+# Effect size calculation
+# Using metafor For ES Calculation
+Syntax ES <- escalc(endpoints, variances, measure, data, ...) 
+endpoints: arguments or formula containing endpoint values 
+variances: arguments containing endpoint variances 
+measure: character value indicating type of ES 
+data: data frame containing named variables
