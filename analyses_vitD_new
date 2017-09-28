@@ -1,4 +1,4 @@
-prevalence
+Prevalence meta-analysis 
 Peto and Mantel-Haenszel methods aren't appropriate for prevalence.
 1. Obtain raw proportions and sample sizes (cases) from each paper. 
 2. Calculating confidence intervals binomial wilson
