@@ -109,3 +109,5 @@ summary.rma.uni(resDL)
 *Note: the log is taken of the relative risk and the odds ratio, which makes these outcome
 measures symmetric around 0 and helps to make the distribution of these outcome measure
 closer to normal
+>function save.image() is a short-cut for save(list
+=ls(all=TRUE), file=".RData"
