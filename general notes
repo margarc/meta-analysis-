@@ -89,3 +89,23 @@ Random
 Mixed
 -> Study-level regression for mean ES
 *The Random effects model can be used to infer what would likely happen if a new study were performed, the FE model cannot
+-----------------------------------------------------------------
+Note for package "metafor"
+
+library("metafor")
+
+# Metafor website and documentation:
+# http://www.metafor-project.org/doku.html
+# and publication:
+# http://www.jstatsoft.org/v36/i03/
+
+How to view results on screen:
+#AB: To print results to screen:
+print.rma.uni(resDL)
+#or
+summary.rma.uni(resDL)
+
+
+*Note: the log is taken of the relative risk and the odds ratio, which makes these outcome
+measures symmetric around 0 and helps to make the distribution of these outcome measure
+closer to normal
