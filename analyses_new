@@ -34,3 +34,7 @@ library("metafor")
 print.rma.uni(resDL)
 #or
 summary.rma.uni(resDL)
+############################################################
+*Note: the log is taken of the relative risk and the odds ratio, which makes these outcome
+measures symmetric around 0 and helps to make the distribution of these outcome measure
+closer to normal
