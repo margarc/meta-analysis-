@@ -30,3 +30,7 @@ library("metafor")
 # http://www.metafor-project.org/doku.html
 # and publication:
 # http://www.jstatsoft.org/v36/i03/
+#AB: To print results to screen:
+print.rma.uni(resDL)
+#or
+summary.rma.uni(resDL)
