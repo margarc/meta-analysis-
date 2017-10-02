@@ -7,4 +7,13 @@ to as the dose or concentration and the dependent variable is usually referred t
 e.g. plasma or serum selenium = independent variable
      risk of advanced prostate cancer = dependent variable (for example presented by relative risks)
 
-*Try R extension package drc.
+
+#Installed package: "dosresmeta"
+library("dosresmeta")
+# The data cc_ex is included in the "dosresmeta" package from the paper: Case-control study used by Greenland and Longnecker (1992) 
+on alcohol consumption (grams/day) and breast cancer risk.
+>data("cc_ex")
+# loaded data
+# check 
+>cc_ex
+>View(cc_ex)
