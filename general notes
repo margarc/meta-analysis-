@@ -40,8 +40,8 @@ Fixed effects model: Inverse-variance, Peto method, M-H method
 
 Random effects model: DerSimonian & Laird method
 -Allows for random error plus inter-study variability
--Studies tend to be weighted more equally (relatively more weight is
-given to smaller studies)
+-Studies tend to be weighted more equally (relatively more weight is given to smaller studies).
+-Wider confidence interval for the summary estimate and, larger p-value
 ----------------------------------------------------------------------------------------------------------------------------------
 Cox Proportional-Hazards Regression for Survival Data in R
 Survival analysis examines and models the time it takes for events to occur. Use the survival package in R to estimate Cox regressions.
