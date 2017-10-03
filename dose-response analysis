@@ -58,3 +58,15 @@ I-square statistic = 0.0%
 
 * From result of this example we say that: we found a significant log-linear dose-response association between  alcohol consumption 
 and colorectal cancer risk (p <0.001) and no evidence of heterogeneity across studies (Q= 4.78, P - VALUE= 0.6868).
+The change in colorectal cancer risk associated with every 12 grams/day (standard drink) can
+be obtained with the predict function. 
+
+>predict(lin, delta = 12, exp = TRUE)
+
+Result:
+dose pred ci.lb ci.ub
+12 1.080313 1.0465 1.115218
+
+So we say: Every 12 grams/day increase in alcohol consumption was associated 
+with a significant 8.0% (95% CI = 1.05, 1.12) increased risk of colorectal cancer.
+
