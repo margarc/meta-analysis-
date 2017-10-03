@@ -18,3 +18,10 @@ on alcohol consumption (grams/day) and breast cancer risk.
 # check 
 >cc_ex
 >View(cc_ex)
+
+
+Using alcohol_crc data from package "dosresmeta"
+
+R> lin <- dosresmeta(formula = logrr ~ dose, id = id, type = type, se = se,
++ cases = cases, n = peryears, data = alcohol_crc)
+R> summary(lin)
