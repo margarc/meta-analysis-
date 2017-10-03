@@ -55,3 +55,6 @@ I-square statistic = 0.0%
 8 studies, 8 values, 1 fixed and 1 random-effects parameters
   logLik       AIC       BIC  
  28.5779  -53.1558  -53.2640  
+
+* From result of this example we say that: we found a significant log-linear dose-response association between  alcohol consumption 
+and colorectal cancer risk (p <0.001) and no evidence of heterogeneity across studies (Q= 4.78, P - VALUE= 0.6868).
