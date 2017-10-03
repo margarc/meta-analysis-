@@ -6,7 +6,8 @@ https://doi.org/10.1371/journal.pone.0146021
 to as the dose or concentration and the dependent variable is usually referred to as response or effect.
 e.g. plasma or serum selenium = independent variable
      risk of advanced prostate cancer = dependent variable (for example presented by relative risks)
-
+     
+In a dose response meta-analysis, the assigned dose is typically the median or midpoint value. 
 
 #Installed package: "dosresmeta"
 library("dosresmeta")
