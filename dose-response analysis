@@ -22,6 +22,8 @@ on alcohol consumption (grams/day) and breast cancer risk.
 
 Using alcohol_crc data from package "dosresmeta"
 
-R> lin <- dosresmeta(formula = logrr ~ dose, id = id, type = type, se = se,
-+ cases = cases, n = peryears, data = alcohol_crc)
-R> summary(lin)
+Command to do the dose response analysis:
+> lin <- dosresmeta(formula = logrr ~ dose, id = id, type = type, se = se, cases = cases, n = peryears, data = alcohol_crc)
+e.g. lin <- dosresmeta(formula = logrr ~ dose, id = id, type = type, se = se, cases = cases, n = peryears, data = alcohol_crc)
+
+> summary(lin)
