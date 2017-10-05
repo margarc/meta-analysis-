@@ -67,7 +67,7 @@ Result:
 dose pred ci.lb ci.ub
 12 1.080313 1.0465 1.115218
 
-So we say: Every 12 grams/day increase in alcohol consumption was associated 
+So say: Every 12 grams/day increase in alcohol consumption was associated 
 with a significant 8.0% (95% CI = 1.05, 1.12) increased risk of colorectal cancer.
 ------------------------------------------------------------------------------------------------------
 # what is "knots"??
