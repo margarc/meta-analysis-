@@ -116,3 +116,5 @@ closer to normal
 Note: Meta-regression requires the estimated treatment eect, its variance, and covariate values for each trial in the systematic review. 
 A common reason for not being able to undertake meta-regression is that these are not all available. 
 Any analysis can only be based on the subset of trials for which full information happens to be available, potentially biasing the results.
+
+*small samples -> large SE -> wide Conf intervals -> high p-values
