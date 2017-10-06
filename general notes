@@ -125,6 +125,8 @@ sample size (vertical axis) and log odds ratio, log risk ratio and risk differen
 -conclude that funnel plots of meta-analyses should generally use standard error as the measure of study size and ratio measures 
 of treatment effect"
 
+*With the standard error plotted on the vertical axis, emphasis of the plot is on smaller studies where bias is more likely. 
+Axis has to be invereted so that larger trials are placed at the top of the graph. 
 
 
 
