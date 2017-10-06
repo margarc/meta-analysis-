@@ -119,6 +119,7 @@ Any analysis can only be based on the subset of trials for which full informatio
 
 *small samples -> large SE -> wide Conf intervals -> high p-values
 -----------------------------------------------------------------------------------------------
+6th Oct 2017
 Funnel plot-choice of axis (Sterne & Egger 2001)
 "...evaluated standard error, precision (inverse of standard error), variance, inverse of variance, sample size and log
 sample size (vertical axis) and log odds ratio, log risk ratio and risk difference (horizontal axis).
@@ -128,5 +129,5 @@ of treatment effect"
 *With the standard error plotted on the vertical axis, emphasis of the plot is on smaller studies where bias is more likely. 
 Axis has to be invereted so that larger trials are placed at the top of the graph. 
 
-
+*pseudo 95% confidence limits in funnel plots ...
 
