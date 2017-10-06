@@ -1,2 +1,6 @@
 Prevalence
 
+AB: prevalence_file <- read.csv(prevalence_file, sep = '\t', header = TRUE, stringsAsFactors = FALSE)... ?
+Example (from previous analysis)
+mprev1 <- metaprop(vddch, totch, studlab=paste(study), data = prevalencedata)
+mprev1
