@@ -118,3 +118,13 @@ A common reason for not being able to undertake meta-regression is that these ar
 Any analysis can only be based on the subset of trials for which full information happens to be available, potentially biasing the results.
 
 *small samples -> large SE -> wide Conf intervals -> high p-values
+-----------------------------------------------------------------------------------------------
+Funnel plot-choice of axis (Sterne & Egger 2001)
+"...evaluated standard error, precision (inverse of standard error), variance, inverse of variance, sample size and log
+sample size (vertical axis) and log odds ratio, log risk ratio and risk difference (horizontal axis).
+-conclude that funnel plots of meta-analyses should generally use standard error as the measure of study size and ratio measures 
+of treatment effect"
+
+
+
+
