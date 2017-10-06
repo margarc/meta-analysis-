@@ -4,3 +4,7 @@ AB: prevalence_file <- read.csv(prevalence_file, sep = '\t', header = TRUE, stri
 Example (from previous analysis)
 mprev1 <- metaprop(vddch, totch, studlab=paste(study), data = prevalencedata)
 mprev1
+
+
+**See paper by Hunter 2014: "In meta-analyses of proportion studies, funnel plots were found to be an inaccurate method of 
+assessing publication bias."
