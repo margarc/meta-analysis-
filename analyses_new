@@ -1,15 +1,13 @@
 Prevalence
-
 AB: prevalence_file <- read.csv(prevalence_file, sep = '\t', header = TRUE, stringsAsFactors = FALSE)... ?
 Example (from previous analysis)
 mprev1 <- metaprop(vddch, totch, studlab=paste(study), data = prevalencedata)
 mprev1
 
-
 **See paper by Hunter 2014: "In meta-analyses of proportion studies, funnel plots were found to be an inaccurate method of 
 assessing publication bias." --not so relevant !!
 
-Narang 2016 included
+Narang 2016, paper in toddlers= included
 ---------------------------------------------
 getwd()
 setwd()
@@ -41,3 +39,9 @@ Details on meta-analytical method:
 - DerSimonian-Laird estimator for tau^2
 - Logit transformation
 - Clopper-Pearson confidence interval for individual studies
+
+metap1 <- metaprop(vddch, totch, studlab=(study), data=prev1, sm = "PLOGIT")
+metap1
+
+# obtain forest plot (random effects)
+forest(metap1, comb.fixed=FALSE, xlab= "proportion")
