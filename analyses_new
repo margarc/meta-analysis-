@@ -7,7 +7,13 @@ mprev1
 
 
 **See paper by Hunter 2014: "In meta-analyses of proportion studies, funnel plots were found to be an inaccurate method of 
-assessing publication bias." --not so relevant to this --check again
+assessing publication bias." --not so relevant !!
 
-
-Narang 2016
+Narang 2016 included
+---------------------------------------------
+getwd()
+setwd()
+library(meta)
+prev1 <- read.csv("preva.R", as.is=TRUE)
+# to see dataset with the 34 studies:
+View(prev1)
