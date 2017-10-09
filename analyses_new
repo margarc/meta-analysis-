@@ -17,3 +17,27 @@ library(meta)
 prev1 <- read.csv("preva.R", as.is=TRUE)
 # to see dataset with the 34 studies:
 View(prev1)
+
+# meta-analysis of proportions with "PLOGIT" i.e: Logit transformation:
+
+metaprop(vddch, totch, studlab=(study), data=prev1, sm = "PLOGIT")
+# gives very similar result to previous analysis with the 25 studies, with random effects model
+Number of studies combined: k = 34
+# again very high heterogeneity
+
+                       proportion           95%-CI            z                  p-value
+Fixed effect model       0.4507          [0.4348; 0.4666]     --       --
+*Random effects model     0.5320         [0.4492; 0.6131]      --       --
+
+Quantifying heterogeneity:
+tau^2 = 0.8840; H = 4.95 [4.49; 5.46]; I^2 = 95.9% [95.0%; 96.6%]
+
+Test of heterogeneity:
+      Q d.f.  p-value
+ 809.09   33 < 0.0001
+
+Details on meta-analytical method:
+- Inverse variance method
+- DerSimonian-Laird estimator for tau^2
+- Logit transformation
+- Clopper-Pearson confidence interval for individual studies
