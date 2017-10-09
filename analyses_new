@@ -45,3 +45,6 @@ metap1
 
 # obtain forest plot (random effects)
 forest(metap1, comb.fixed=FALSE, xlab= "proportion")
+
+# then repeat for forest plot (fixed effects)
+forest(metap1, comb.fixed=FALSE, xlab= "proportion")
