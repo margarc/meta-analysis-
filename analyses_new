@@ -49,3 +49,13 @@ forest(metap1, comb.fixed=FALSE, xlab= "proportion")
 # then repeat for forest plot (fixed effects)
 forest(metap1, comb.random=FALSE, xlab= "proportion")
 # gives more precise estimate see conf.intervals, narrower
+#funnel plot random 
+funnel(metap1)
+-----------------------------------------------------------------------------------------------
+SEPSIS
+
+
+
+
+
+
