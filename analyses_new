@@ -1,4 +1,5 @@
-Prevalence
+1) Prevalence of vdd in all crticially ill pediatric population
+
 AB: prevalence_file <- read.csv(prevalence_file, sep = '\t', header = TRUE, stringsAsFactors = FALSE)... ?
 Example (from previous analysis)
 mprev1 <- metaprop(vddch, totch, studlab=paste(study), data = prevalencedata)
@@ -48,11 +49,13 @@ forest(metap1, comb.fixed=FALSE, xlab= "proportion")
 
 # then repeat for forest plot (fixed effects)
 forest(metap1, comb.random=FALSE, xlab= "proportion")
-# gives more precise estimate see conf.intervals, narrower
-#funnel plot random 
+# gives more precise estimate of effect size, see conf.intervals= narrower
+
+#funnel plot
 funnel(metap1)
 -----------------------------------------------------------------------------------------------
-SEPSIS
+2) SEPSIS
+prevalence of vdd in chdn with sepsis
 
 
 
