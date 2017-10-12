@@ -63,6 +63,36 @@ funnel(meta2$TE, meta2$seTE, sm= "OR", comb.fixed =TRUE, level=0.95)
 2) SEPSIS
 prevalence of vdd in chdn with sepsis
 
+getwd()
+setwd("\\\\icnas2.cc.ic.ac.uk/mc6515/rdatasets")
+
+# do the meta-analysis for proportions
+
+prevs1 <- read.csv("prevalence_sepsis.rda", as.is = TRUE) 
+View(prevs1)
+metaprop(vddseps, totseps, studlab=(study), data=prevseps1, sm = "PLOGIT")
+
+Results
+Number of studies combined: k = 13
+
+                     proportion           95%-CI  z  p-value
+Fixed effect model       0.6929 [0.6489; 0.7337] --       --
+Random effects model     0.6724 [0.5740; 0.7577] --       --
+
+Quantifying heterogeneity:
+ tau^2 = 0.3968; H = 1.95 [1.48; 2.57]; I^2 = 73.7% [54.4%; 84.8%]
+
+Test of heterogeneity:
+     Q d.f.  p-value
+ 45.62   12 < 0.0001
+
+
+Prevalence of vitamin d def in chdn with sepsis (with the random effects model) now with the 13 studies: 67.2% 
+
+
+
+
+
 
 
 
