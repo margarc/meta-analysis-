@@ -70,7 +70,7 @@ setwd("\\\\icnas2.cc.ic.ac.uk/mc6515/rdatasets")
 
 prevs1 <- read.csv("prevalence_sepsis.rda", as.is = TRUE) 
 View(prevs1)
-metaprop(vddseps, totseps, studlab=(study), data=prevseps1, sm = "PLOGIT")
+metaprop(vddseps, totseps, studlab=(study), data=prevs1, sm = "PLOGIT")
 
 Results
 Number of studies combined: k = 13
