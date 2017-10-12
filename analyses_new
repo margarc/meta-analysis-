@@ -72,6 +72,10 @@ prevs1 <- read.csv("prevalence_sepsis.rda", as.is = TRUE)
 View(prevs1)
 metaprop(vddseps, totseps, studlab=(study), data=prevs1, sm = "PLOGIT")
 
+# give this meta-analysis a name
+metaprevs1 <- metaprop(vddseps, totseps, studlab=(study), data=prevs1, sm = "PLOGIT")
+
+
 Results
 Number of studies combined: k = 13
 
@@ -86,13 +90,13 @@ Test of heterogeneity:
      Q d.f.  p-value
  45.62   12 < 0.0001
 
+# Prevalence of vitamin d def in chdn with sepsis (with the random effects model) now with the 13 studies: 67.2% 
 
-Prevalence of vitamin d def in chdn with sepsis (with the random effects model) now with the 13 studies: 67.2% 
+# get the forest plot- random effects, and save it as a pdf file
+forest(metaprevs1, comb.fixed=FALSE, xlab= "proportion")
 
-
-
-
-
+# get the forest plot-fixed effects, and save it as a pdf file
+forest(metaprevs1, comb.random=FALSE, xlab= "proportion")
 
 
 
