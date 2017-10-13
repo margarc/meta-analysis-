@@ -98,7 +98,8 @@ forest(metaprevs1, comb.fixed=FALSE, xlab= "proportion")
 # get the forest plot-fixed effects, and save it as a pdf file
 forest(metaprevs1, comb.random=FALSE, xlab= "proportion")
 
+-------------------------------------------------------------------------------------------------------------
 
-
+Mortality (all)
 
 
