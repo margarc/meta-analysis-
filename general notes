@@ -134,7 +134,8 @@ Q: names of studies corresponding to each funnel plot dot?
 --------------------------------------------------------------------------------------------------------------------------------
 
 Q: How can I import a particular dataset from excel to R without needing to copy in a different excel document!?!
-
-
+Try
+datasets <- readxl_example("datasets.xlsx")
+read_excel(datasets)
 
 
