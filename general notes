@@ -137,5 +137,7 @@ Q: How can I import a particular dataset from excel to R without needing to copy
 Try
 datasets <- readxl_example("datasets.xlsx")
 read_excel(datasets)
-
+# Specify sheet either by position or by name
+read_excel(datasets, 2)
+read_excel(datasets, "mtcars")
 
