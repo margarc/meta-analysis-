@@ -81,7 +81,7 @@ Number of studies combined: k = 13
 
                      proportion           95%-CI  z  p-value
 Fixed effect model       0.6929 [0.6489; 0.7337] --       --
-Random effects model     0.6724 [0.5740; 0.7577] --       --
+**Random effects model     0.6724 [0.5740; 0.7577] --       --
 
 Quantifying heterogeneity:
  tau^2 = 0.3968; H = 1.95 [1.48; 2.57]; I^2 = 73.7% [54.4%; 84.8%]
@@ -98,6 +98,18 @@ forest(metaprevs1, comb.fixed=FALSE, xlab= "proportion")
 # get the forest plot-fixed effects, and save it as a pdf file
 forest(metaprevs1, comb.random=FALSE, xlab= "proportion")
 
+*analysis repeated excluding Ebenezer cz they use the word "shock". I did send an email ask what this definition includes
+(if it is just for sepsis or if it includes other conditions as well.) 
+
+Results very similar:
+Number of studies combined: k = 12
+
+                     proportion           95%-CI  z  p-value
+Fixed effect model        0.7003 [0.6559; 0.7413] --       --
+**Random effects model     0.6845 [0.5837; 0.7705] --       --
+
+Quantifying heterogeneity:
+tau^2 = 0.3963; H = 1.97 [1.48; 2.62]; I^2 = 74.3% [54.6%; 85.5%]
 -------------------------------------------------------------------------------------------------------------
 
 Mortality (all)
