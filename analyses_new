@@ -105,6 +105,11 @@ forest(metaprevs1, comb.random=FALSE, xlab= "proportion")
 prevasepsis <- read.csv("sepsisprev.rda", as.is = TRUE) 
 View(prevasepsis)
 metaprop(vddseps, totseps, studlab=(study), data=prevasepsis, sm = "PLOGIT")
+metapseps <- metaprop(vddseps, totseps, studlab=(study), data=prevasepsis, sm = "PLOGIT")
+forest(metapseps, comb.fixed=FALSE, xlab= "proportion")
+funnel(metaseps)
+
+
 Results very similar:
 Number of studies combined: k = 12
 
