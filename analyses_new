@@ -102,4 +102,10 @@ forest(metaprevs1, comb.random=FALSE, xlab= "proportion")
 
 Mortality (all)
 
+mortdata <- read.csv("mort1.rda", as.is=TRUE)
+View(mortdata)
+
+metabin(deaddef, alldef, deadnotdef, allnotdef, sm= "OR", method="I", data=mortdata, studlab=study)
+
+metamort <- metabin(deaddef, alldef, deadnotdef, allnotdef, sm= "OR", method="I", data=mortdata, studlab=study)
 
