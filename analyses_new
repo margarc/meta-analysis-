@@ -109,3 +109,13 @@ metabin(deaddef, alldef, deadnotdef, allnotdef, sm= "OR", method="I", data=mortd
 
 metamort <- metabin(deaddef, alldef, deadnotdef, allnotdef, sm= "OR", method="I", data=mortdata, studlab=study)
 
+
+                 OR                                 95%-CI                                          z                                        p-value
+Fixed effect model                  1.4121           [0.9564; 2.0848]      1.74                                   0.0826
+Random effects model           1.5233          [0.9828; 2.3610]      1.88                                   0.0598
+Heterogeneity:  Quantifying heterogeneity:
+tau^2 = 0.0903; H = 1.07 [1.00; 1.44]; I^2 = 13.4% [0.0%; 51.9%]
+
+Test of heterogeneity:
+   Q          d.f.        p-value
+ 15.00        13          0.3071
