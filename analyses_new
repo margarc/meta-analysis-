@@ -13,13 +13,14 @@ Narang 2016, paper in toddlers= included
 getwd()
 setwd()
 library(meta)
-prev1 <- read.csv("preva.R", as.is=TRUE)
+prev1 <- read.csv("prevalln.R", as.is=TRUE)
 # to see dataset with the 34 studies:
-View(prev1)
+View(preva1)
 
 # meta-analysis of proportions with "PLOGIT" i.e: Logit transformation:
 
-metaprop(vddch, totch, studlab=(study), data=prev1, sm = "PLOGIT")
+metaprop(vddch, totch, studlab=(study), data=preva1, sm = "PLOGIT")
+
 # gives very similar result to previous analysis with the 25 studies, with random effects model
 Number of studies combined: k = 34
 # again very high heterogeneity
@@ -41,18 +42,18 @@ Details on meta-analytical method:
 - Logit transformation
 - Clopper-Pearson confidence interval for individual studies
 
-metap1 <- metaprop(vddch, totch, studlab=(study), data=prev1, sm = "PLOGIT")
-metap1
+metapr1 <- metaprop(vddch, totch, studlab=(study), data=preva1, sm = "PLOGIT")
+metapr1
 
 # obtain forest plot (random effects)
-forest(metap1, comb.fixed=FALSE, xlab= "proportion")
+forest(metapr1, comb.fixed=FALSE, xlab= "proportion")
 
 # then repeat for forest plot (fixed effects)
-forest(metap1, comb.random=FALSE, xlab= "proportion")
+forest(metapr1, comb.random=FALSE, xlab= "proportion")
 # gives more precise estimate of effect size, see conf.intervals= narrower
 
 #funnel plot
-funnel(metap1)
+funnel(metapr1)
 
 
 AB use: 
@@ -101,6 +102,9 @@ forest(metaprevs1, comb.random=FALSE, xlab= "proportion")
 *analysis repeated excluding Ebenezer cz they use the word "shock". I did send an email ask what this definition includes
 (if it is just for sepsis or if it includes other conditions as well.) 
 
+prevasepsis <- read.csv("sepsisprev.rda", as.is = TRUE) 
+View(prevasepsis)
+metaprop(vddseps, totseps, studlab=(study), data=prevasepsis, sm = "PLOGIT")
 Results very similar:
 Number of studies combined: k = 12
 
