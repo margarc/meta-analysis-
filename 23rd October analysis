@@ -15,3 +15,26 @@ Quantifying heterogeneity:
 Test of heterogeneity:
       Q d.f.  p-value
  810.35   35 < 0.0001
+# p.s get forests + funnels for this
+------------------------------------------------------------------------------------------
+Prevalence sepsis 
+# sepsis analysis 
+sepsisredo <- read.csv("sepsisnew.rda", as.is = TRUE)
+summary(sepsisredo)
+View(sepsisredo)
+
+metaprop(vddseps, totseps, studlab=(study), data=sepsisnew, sm = "PLOGIT")
+RESULT:
+
+Number of studies combined: k = 13
+
+                     proportion           95%-CI  z  p-value
+Fixed effect model       0.6929 [0.6489; 0.7337] --       --
+Random effects model     0.6724 [0.5740; 0.7577] --       --
+
+Quantifying heterogeneity:
+ tau^2 = 0.3968; H = 1.95 [1.48; 2.57]; I^2 = 73.7% [54.4%; 84.8%]
+
+Test of heterogeneity:
+     Q d.f.  p-value
+ 45.62   12 < 0.0001
