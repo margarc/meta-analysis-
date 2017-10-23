@@ -1,0 +1,13 @@
+1) Prevalence of vdd in all crticially ill pediatric population
+Number of studies combined: k = 36
+
+                       proportion           95%-CI              z  p-value
+Fixed effect model       0.4522            [0.4366; 0.4679]     --       --
+Random effects model     0.5276            [0.4486; 0.6053]      --       --
+
+Quantifying heterogeneity:
+ tau^2 = 0.8511; H = 4.81 [4.37; 5.30]; I^2 = 95.7% [94.8%; 96.4%]
+
+Test of heterogeneity:
+      Q d.f.  p-value
+ 810.35   35 < 0.0001
