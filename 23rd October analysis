@@ -1,6 +1,10 @@
 1) Prevalence of vdd in all crticially ill pediatric population
+prevalence1 <- read.csv("prevanew.rda", as.is = TRUE)
+View("prevanew")
+prevalence1
+summary(prevalence1)
 Number of studies combined: k = 36
-
+RESULT:
                        proportion           95%-CI              z  p-value
 Fixed effect model       0.4522            [0.4366; 0.4679]     --       --
 Random effects model     0.5276            [0.4486; 0.6053]      --       --
