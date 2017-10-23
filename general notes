@@ -140,4 +140,7 @@ read_excel(datasets)
 # Specify sheet either by position or by name
 read_excel(datasets, 2)
 read_excel(datasets, "mtcars")
+-----------------------------------------------------------------------------------------
+packages dplyr, tidyr, and broom: to create a table in R and export in word (try it)
+
 
