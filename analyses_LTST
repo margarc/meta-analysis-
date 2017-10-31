@@ -1,3 +1,6 @@
 Link to eggers test: meta_analysis_and_umbrella/meta_analysis_and_umbrella/risk_of_bias.R
 # Egger's test linear regression
 metabias(metap1, method="linreg")
+And how to interprete this:
+
+
