@@ -143,4 +143,4 @@ read_excel(datasets, "mtcars")
 -----------------------------------------------------------------------------------------
 packages dplyr, tidyr, and broom: to create a table in R and export in word (try it)
 
-
+Remember use NOS_adapted for crosss sectional studiess
