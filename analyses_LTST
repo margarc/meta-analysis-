@@ -31,4 +31,30 @@ library(metafor)
 prevanew <- read.csv("prevalence_new.rda", as.is = TRUE)
 View(prevanew)
 metaprop(vddch, totch, studlab=paste(study), data = prevanew)
+
+RESULT:
 Number of studies combined: k = 50
+
+# Eggers test 
+data:  metapreva
+t = 1.9851, df = 48, p-value = 0.05286
+null hypothesis: no symmetry in the funne
+alternative hypothesis: asymmetry in funnel plot
+sample estimates:
+      bias    se.bias      slope 
+ 2.8633915  1.4424067 -0.6624792 
+----------------------------------------------------
+Repeat without the 11 
+
+#analysis repeated excluding the 11 studies that used thresholds other than <50 nmol/L or 20ng/ml 
+prevthresholds <- read.csv("threshold.rda", as.is = TRUE)
+prevthresholds
+getwd()
+setwd("C:/Users/INSPIRON/Documents/Rlast")
+thresholds_prev <- read.csv("threshold_new.rda", as.is = TRUE)
+thresholds_prev
+metaprop(vddch, totch, studlab=paste(study), data = thresholds_prev)
+
+ 
+
+-----------------------------------------------------------------------
