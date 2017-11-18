@@ -20,3 +20,15 @@ sample estimates:
 
 
 NOTE: after u finish main analyses run one excluding those studies that used levels other than 20ng/ml (or 50 nmol/L)
+-----------------------------------------------
+18th Nov
+#ANALYSIS repeated 18th November
+#Prevalence of vitamin D deficiency from thw whole dataset of studies (n= 50 studies)
+getwd()
+setwd("C:/Users/INSPIRON/Documents/Rch")
+library(meta)
+library(metafor)
+prevanew <- read.csv("prevalence_new.rda", as.is = TRUE)
+View(prevanew)
+metaprop(vddch, totch, studlab=paste(study), data = prevanew)
+Number of studies combined: k = 50
