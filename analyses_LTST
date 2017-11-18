@@ -49,12 +49,21 @@ Repeat without the 11
 #analysis repeated excluding the 11 studies that used thresholds other than <50 nmol/L or 20ng/ml 
 prevthresholds <- read.csv("threshold.rda", as.is = TRUE)
 prevthresholds
-getwd()
-setwd("C:/Users/INSPIRON/Documents/Rlast")
 thresholds_prev <- read.csv("threshold_new.rda", as.is = TRUE)
 thresholds_prev
 metaprop(vddch, totch, studlab=paste(study), data = thresholds_prev)
 
+result:
+                     proportion           95%-CI  z  p-value
+Fixed effect model       0.4608 [0.4459; 0.4758] --       --
+Random effects model     0.5175 [0.4441; 0.5902] --       --
+
+Quantifying heterogeneity:
+tau^2 = 0.8007; H = 4.72 [4.29; 5.18]; I^2 = 95.5% [94.6%; 96.3%]
+
+Test of heterogeneity:
+      Q d.f.  p-value
+ 844.86   38 < 0.0001
  
 
 -----------------------------------------------------------------------
