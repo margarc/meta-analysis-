@@ -151,6 +151,6 @@ save.image(file=R_session_saved_image, compress='gzip') --test
 ---------------------------------------------
 
 *Influence analysis: meta-analysis estimates (pooled estimates) are computed omitting one study at a time (...)
-
+* using metainf in meta 
 
 
