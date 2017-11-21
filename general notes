@@ -148,3 +148,9 @@ Remember use NOS_adapted for crosss sectional studies
 AB:
 # To save R workspace with all objects to use at a later time:
 save.image(file=R_session_saved_image, compress='gzip') --test
+---------------------------------------------
+
+*Influence analysis: meta-analysis estimates are computed omitting one study at a time (...)
+
+
+
