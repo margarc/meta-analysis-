@@ -68,3 +68,12 @@ Test of heterogeneity:
 
 -----------------------------------------------------------------------
 # mortality sens analysis exclusion of 3 studies with other thresholds to see how this affetcs results
+# mortality sensitivity analysis excluding the three studies 
+mothresh <-read.csv("thresholdsmort.rda", as.is = TRUE)
+mothresh
+View(mothresh)
+library(meta)
+library(metafor)
+metabin(deaddef, alldef, deadnotdef, allnotdef, sm= "OR", method="I", data=mothresh, studlab=study)
+# Eggers test 
+metabias(metapreva, method="linreg")
