@@ -77,3 +77,7 @@ library(metafor)
 metabin(deaddef, alldef, deadnotdef, allnotdef, sm= "OR", method="I", data=mothresh, studlab=study)
 # Eggers test 
 metabias(metapreva, method="linreg")
+# obtain forest plot (random effects)
+forest(metathreshm, comb.fixed=FALSE, xlab= "odds ratio")
+funnel(metathreshm)
+# choose to see the graph in A4 scale and landscape
