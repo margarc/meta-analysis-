@@ -81,3 +81,12 @@ metabias(metapreva, method="linreg")
 forest(metathreshm, comb.fixed=FALSE, xlab= "odds ratio")
 funnel(metathreshm)
 # choose to see the graph in A4 scale and landscape
+
+
+Q: how to change scale of plot and how to edit from R studio.
+also how to add the legend to a plot 
+
+
+
+
+
