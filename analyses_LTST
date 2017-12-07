@@ -86,7 +86,46 @@ funnel(metathreshm)
 Q: how to change scale of plot and how to edit from R studio.
 also how to add the legend to a plot 
 
+SOS: use below and replace in results- 
 
+# 7th dec correction for sepsis prevalence 
+#
+prvcorrect <-read.csv("correctprevseps.rda", as.is = TRUE)
+View(prvcorrect)
+metaprop(vddseps, totseps, studlab=paste(study), data = prvcorrect)
+metaprop(vddseps, totseps, studlab=(study), data=prvcorrect, sm = "PLOGIT")
+cprs <- metaprop(vddseps, totseps, studlab=(study), data=prvcorrect, sm = "PLOGIT")
+cprs
+metabias(cprs, method="linreg")
+forest(cprs, comb.fixed=FALSE, xlab= "proportion")
+funnel(cprs)
+Number of studies combined: k = 16
+
+                     proportion           95%-CI  z  p-value
+Fixed effect model       0.6140 [0.5756; 0.6510] --       --
+Random effects model     0.6366 [0.5019; 0.7529] --       --
+
+Quantifying heterogeneity:
+ tau^2 = 1.0829; H = 3.28 [2.73; 3.95]; I^2 = 90.7% [86.6%; 93.6%]
+
+Test of heterogeneity:
+      Q d.f.  p-value
+ 161.68   15 < 0.0001
+
+Details on meta-analytical method:
+- Inverse variance method
+- DerSimonian-Laird estimator for tau^2
+- Logit transformation
+- Clopper-Pearson confidence interval for individual studies
+
+
+Eggers test for risk of bias
+data:  cprs
+t = 0.48208, df = 14, p-value = 0.6372
+alternative hypothesis: asymmetry in funnel plot
+sample estimates:
+     bias   se.bias     slope 
+1.0506937 2.1794967 0.1487819
 
 
 
