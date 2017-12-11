@@ -1,0 +1,37 @@
+# 51 studies
+getwd()
+setwd("C:/Users/INSPIRON/Documents/redonech")
+library(meta)
+library(metafor)
+prevnew <- read.csv("prev1.rda", as.is=TRUE)
+prevnew
+View(prevnew)
+metaprop(vddch, totch, studlab=(study), data=prevnew)
+metaprev1 <- metaprop(vddch, totch, studlab=(study), data=prevnew)
+metaprev1
+forest(metaprev1, comb.fixed=FALSE, xlab= "proportion")
+metabias(metaprev1, method="linreg")
+funnel(metaprev1)
+##########################
+
+PREVALENCE WITH ONLY THOSE WHO REPORT LEVELS <50 nmol/L
+
+thresh <- read.csv("threshold1.rda", as.is=TRUE)
+thresh
+metaprop(vddch, totch, studlab=(study), data=thresh)
+metathresh <- metaprop(vddch, totch, studlab=(study), data=thresh)
+metathresh
+funnel(metathresh)
+metabias(metathresh)
+###########################
+# only case-control and cross sectional with Roth 2010
+cccs <-read.csv("casecross.rda", as.is=TRUE)
+cccs
+View(cccs)
+metaprop(vddch, totch, studlab=(study), data=cccs)
+#################
+# those with sample size <100
+#
+smalls <- read.csv("samplesizeless100.rda", as.is=TRUE)
+smalls
+metaprop(vddch, totch, studlab=(study), data=smalls)
