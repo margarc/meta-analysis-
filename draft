@@ -38,10 +38,33 @@ metaprop(vddch, totch, studlab=(study), data=smalls)
 #######################################################################################################
 Random vs Fixed see difference pls
 
+
+Funnel plot fixed vs random 
+
 funnel(meta1$TE, meta1$seTE, sm="RR",
        comb.fixed=TRUE, level=0.95)
 
 try: funnel(metam, comb.fixed=TRUE, level=0.95)
+
+Begg and Mazumdar (1994) 
+The function carries out the rank correlation test as described in Begg and Mazumdar (1994). 
+The test can be used to examine whether the observed outcomes and the corresponding sampling variances are correlated. 
+An asymmetric funnel plot would give rise to such a correlation and may be indicative of publication bias. The function is actually a wrapper for the cor.test function with method="kendall". 
+If possible, an exact p-value is provided; otherwise, a large-sample approximation is used.
+
+x	
+An object of class meta or estimated treatment effect in individual studies.
+seTE	
+Standard error of estimated treatment effect (mandatory if x not of class meta).
+method.bias	
+A character string indicating which test is to be used. Either "rank", "linreg", "mm", "count", "score", or "peters", can be abbreviated.
+plotit	
+A logical indicating whether a plot should be produced for method.bias "rank", "linreg", "mm", or "score".
+correct	
+A logical indicating whether a continuity corrected statistic is used for rank correlation methods "rank" and "count".
+k.min	
+Minimum number of studies to perform test for funnel plot asymmetry.
+
 
 
 
