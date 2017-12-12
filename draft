@@ -66,5 +66,6 @@ k.min
 Minimum number of studies to perform test for funnel plot asymmetry.
 
 
-
+Egger’s test: report
+Z statistic (p value)
 
