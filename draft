@@ -69,3 +69,10 @@ Minimum number of studies to perform test for funnel plot asymmetry.
 Egger’s test: report
 Z statistic (p value)
 
+>"Publication bias was assessed by screening funnel plots for any asymmetry and by using the Egger regression test16 for analyses of more than three studies.
+p values less than 0·1 were deemed to correspond with significant asymmetry"- Xiao 2016 
+
+<0.1 instead of 0.05 
+
+
+
