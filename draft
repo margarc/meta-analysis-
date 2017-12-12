@@ -35,3 +35,13 @@ metaprop(vddch, totch, studlab=(study), data=cccs)
 smalls <- read.csv("samplesizeless100.rda", as.is=TRUE)
 smalls
 metaprop(vddch, totch, studlab=(study), data=smalls)
+#######################################################################################################
+Random vs Fixed see difference pls
+
+funnel(meta1$TE, meta1$seTE, sm="RR",
+       comb.fixed=TRUE, level=0.95)
+
+
+
+
+
