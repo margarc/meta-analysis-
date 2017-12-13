@@ -74,5 +74,12 @@ p values less than 0·1 were deemed to correspond with significant asymmetry"- X
 
 <0.1 instead of 0.05 
 
-
+mortn <- read.csv("mortalityn.rda", as.is=TRUE)
+mortn
+View(mortn)
+metabin(deaddef, alldef, deadnotdef, allnotdef, sm= "OR", method="I", data=mortn, studlab=study)
+metamo <- metabin(deaddef, alldef, deadnotdef, allnotdef, sm= "OR", method="I", data=mortn, studlab=study)
+metamo
+funnel(metamo, comb.random =TRUE, level=0.95)
+metabias(metamo, method="linreg")
 
