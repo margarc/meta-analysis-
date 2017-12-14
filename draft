@@ -83,3 +83,16 @@ metamo
 funnel(metamo, comb.random =TRUE, level=0.95)
 metabias(metamo, method="linreg")
 
+14th December
+>consider sequencial removbal of studies that are outside the 95% CIs of the funnel plot (as a sensitivity analysis).
+To possibly see if there is any effect on reducing heterogeneity. Main results should still be presented with all studies.
+>changing level of significance? <0.1 instead of <0.05.....
+
+
+
+
+
+
+
+
+
