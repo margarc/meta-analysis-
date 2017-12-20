@@ -1,12 +1,12 @@
-31st
 Link to eggers test: meta_analysis_and_umbrella/meta_analysis_and_umbrella/risk_of_bias.R
-# Egger's test linear regression
+Egger's test linear regression
 metabias(metap1, method="linreg")
+
 And how to interpret this:
-# Null-hypothesis: no bias in a meta-analysis 
-# Assumption of test: Linearity still holds in the presence of bias
-# Again for this test use the metabias functgion of the R package meta like this:
-# example: >metabias (ms1, method="linreg")
+Null-hypothesis: no bias in a meta-analysis 
+Assumption of test: Linearity still holds in the presence of bias
+Again for this test use the metabias functgion of the R package meta like this:
+example: >metabias (ms1, method="linreg")
 
 Example with explanation from a previous analysis:
 data:  mort1
@@ -15,15 +15,14 @@ alternative hypothesis: asymmetry in funnel plot
 sample estimates:
     bias   se.bias     slope 
 1.682775  0.428511 -0.905780 
- * so in this case Eggers test shows a significant p-value (0.0035) which is less than 0.05 and thus this leads to rejecting the null 
+so in this case Eggers test shows a significant p-value (0.0035) which is less than 0.05 and thus this leads to rejecting the null 
  hypothesis of symmetry in the funnel plot; so asymmetric (evid of publ bias?)
-
 
 NOTE: after u finish main analyses run one excluding those studies that used levels other than 20ng/ml (or 50 nmol/L)
 -----------------------------------------------
 18th Nov
-#ANALYSIS repeated 18th November
-#Prevalence of vitamin D deficiency from thw whole dataset of studies (n= 50 studies)
+ANALYSIS repeated 18th November
+Prevalence of vitamin D deficiency from thw whole dataset of studies (n= 50 studies)
 getwd()
 setwd("C:/Users/INSPIRON/Documents/Rch")
 library(meta)
@@ -35,61 +34,57 @@ metaprop(vddch, totch, studlab=paste(study), data = prevanew)
 RESULT:
 Number of studies combined: k = 50
 
-# Eggers test 
+Eggers test 
 data:  metapreva
 t = 1.9851, df = 48, p-value = 0.05286
-null hypothesis: no symmetry in the funne
+
+null hypothesis: no symmetry in the funnel
 alternative hypothesis: asymmetry in funnel plot
 sample estimates:
       bias    se.bias      slope 
  2.8633915  1.4424067 -0.6624792 
 ----------------------------------------------------
 Repeat without the 11 
-
-#analysis repeated excluding the 11 studies that used thresholds other than <50 nmol/L or 20ng/ml 
+analysis repeated excluding the 11 studies that used thresholds other than <50 nmol/L or 20ng/ml 
 prevthresholds <- read.csv("threshold.rda", as.is = TRUE)
 prevthresholds
 thresholds_prev <- read.csv("threshold_new.rda", as.is = TRUE)
 thresholds_prev
 metaprop(vddch, totch, studlab=paste(study), data = thresholds_prev)
 
-result:
-                     proportion           95%-CI  z  p-value
-Fixed effect model       0.4608 [0.4459; 0.4758] --       --
-Random effects model     0.5175 [0.4441; 0.5902] --       --
+RESULT:
+                       proportion           95%-CI          z  p-value
+Fixed effect model       0.4608          [0.4459; 0.4758]   --       --
+Random effects model     0.5175          [0.4441; 0.5902]   --       --
 
 Quantifying heterogeneity:
 tau^2 = 0.8007; H = 4.72 [4.29; 5.18]; I^2 = 95.5% [94.6%; 96.3%]
-
 Test of heterogeneity:
       Q d.f.  p-value
  844.86   38 < 0.0001
  
-
------------------------------------------------------------------------
-# mortality sens analysis exclusion of 3 studies with other thresholds to see how this affetcs results
-# mortality sensitivity analysis excluding the three studies 
+ -----------------------------------------------------------------------
+mortality sens analysis exclusion of 3 studies with other thresholds to see how this affetcs results
+mortality sensitivity analysis excluding the three studies 
 mothresh <-read.csv("thresholdsmort.rda", as.is = TRUE)
 mothresh
 View(mothresh)
 library(meta)
 library(metafor)
 metabin(deaddef, alldef, deadnotdef, allnotdef, sm= "OR", method="I", data=mothresh, studlab=study)
-# Eggers test 
+Eggers test 
 metabias(metapreva, method="linreg")
-# obtain forest plot (random effects)
+obtain forest plot (random effects)
 forest(metathreshm, comb.fixed=FALSE, xlab= "odds ratio")
 funnel(metathreshm)
-# choose to see the graph in A4 scale and landscape
+choose to see the graph in A4 scale and landscape
 
-
-Q: how to change scale of plot and how to edit from R studio.
+how to change scale of plot and how to edit from R studio.
 also how to add the legend to a plot 
 
-SOS: use below and replace in results- 
+SOS: use below and replace in results
+7th dec correction for sepsis prevalence 
 
-# 7th dec correction for sepsis prevalence 
-#
 prvcorrect <-read.csv("correctprevseps.rda", as.is = TRUE)
 View(prvcorrect)
 metaprop(vddseps, totseps, studlab=paste(study), data = prvcorrect)
@@ -101,23 +96,22 @@ forest(cprs, comb.fixed=FALSE, xlab= "proportion")
 funnel(cprs)
 Number of studies combined: k = 16
 
-                     proportion           95%-CI  z  p-value
-Fixed effect model       0.6140 [0.5756; 0.6510] --       --
-Random effects model     0.6366 [0.5019; 0.7529] --       --
+                      proportion           95%-CI  z            p-value
+Fixed effect model       0.6140         [0.5756; 0.6510]         --    --
+Random effects model     0.6366         [0.5019; 0.7529]         --    --
 
 Quantifying heterogeneity:
- tau^2 = 1.0829; H = 3.28 [2.73; 3.95]; I^2 = 90.7% [86.6%; 93.6%]
+tau^2 = 1.0829; H = 3.28 [2.73; 3.95]; I^2 = 90.7% [86.6%; 93.6%]
 
 Test of heterogeneity:
       Q d.f.  p-value
  161.68   15 < 0.0001
 
 Details on meta-analytical method:
-- Inverse variance method
-- DerSimonian-Laird estimator for tau^2
-- Logit transformation
-- Clopper-Pearson confidence interval for individual studies
-
+Inverse variance method
+DerSimonian-Laird estimator for tau^2
+Logit transformation
+Clopper-Pearson confidence interval for individual studies
 
 Eggers test for risk of bias
 data:  cprs
@@ -126,6 +120,4 @@ alternative hypothesis: asymmetry in funnel plot
 sample estimates:
      bias   se.bias     slope 
 1.0506937 2.1794967 0.1487819
-
-
 
