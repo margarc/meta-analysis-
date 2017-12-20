@@ -1,55 +1,49 @@
-binary variables can only take two possible values 
+Binary variables can only take two possible values 
 
-generalisability of results* 
+Generalisability of results* 
 -age
--country of origin (most frm middle & high income)
-
+-country of origin (most from middle & high income or developed developing)
 
 Confounder (three criteria):
 1. Must be associated with the study exposure
 2. Must be a risk factor for a disease in the absence of the study exposure 
 3. Must NOT be a consequence of the exposure (i.e. not in the causal pathway between exposure and disease)
-* It can lead to overestimating or underestimating the true association between exposure and disease an can even change the 
+>It can lead to overestimating or underestimating the true association between exposure and disease an can even change the 
 direction of the observed effect. 
-
 
 Bias: Incorrect estimate of the measure of effect either toward or away from the null. 
 It will lead to inaccurate results. 
 Confounding can lead to bias 
 
+Observational studies are subject to the limitations of: chance, confounding, bias 
 
-*Observational studies are subject to the limitations of: chance, confounding, bias 
-
-
-
-
-# Baujat plot (what is this?) : a graph of the influence of individual studies on beta coefficients versus its relative contribution 
-# to the pooled heterogeneity estimate . . . 
+Baujat plot: a graph of the influence of individual studies on beta coefficients versus its relative contribution 
+to the pooled heterogeneity estimate
 ----------------------------------------------------------------------------------------------------------------------------------
 Define heterogeneity: when there is more variation in the results than would be expected by chance alone. 
 >that could be the consequence of: clinical, methodological or statistical variation
 
-*How to check for it? 
+How to check for it? 
 >Visually: forest plot how much do individual studies overlap with each other and the summary effect 
 >Stats tests: chi squared tests for heterogeneity (Cochran Q test): Tests whether the individual effects are farther away from the
 common effect, beyond what is expected by chance
 > I-squared: % of total variability in effect measure that is attributable to heterogeneity (i.e. not to chance)
 
 Fixed effects model: Inverse-variance, Peto method, M-H method
--Assumes there is no statistical heterogeneity among the studies
+>Assumes there is no statistical heterogeneity among the studies
 
 Random effects model: DerSimonian & Laird method
--Allows for random error plus inter-study variability
--Studies tend to be weighted more equally (relatively more weight is given to smaller studies).
--Wider confidence interval for the summary estimate and, larger p-value
+>Allows for random error plus inter-study variability
+>Studies tend to be weighted more equally (relatively more weight is given to smaller studies).
+>Wider confidence interval for the summary estimate and, larger p-value
 ----------------------------------------------------------------------------------------------------------------------------------
 Cox Proportional-Hazards Regression for Survival Data in R
 Survival analysis examines and models the time it takes for events to occur. Use the survival package in R to estimate Cox regressions.
-Survival analysis typically examines the relationship of the survival distribution to covariates. Most
-commonly, this examination entails the specification of a linear-like model for the log hazard.
+Survival analysis typically examines the relationship of the survival distribution to covariates. 
+Most commonly, this examination entails the specification of a linear-like model for the log hazard.
 
-# Install "survival" package in R
-# coxph Function
+Install "survival" package in R
+coxph Function
 > library(survival)
 > args(coxph)
 ----------------------------------------------------------------------------------------------------------------------------------
@@ -81,43 +75,36 @@ measure: character value indicating type of ES
 data: data frame containing named variables
 
 Modeling Approaches:
-
 Fixed
--> Same mean ES, zero between-study variance
+>Same mean ES, zero between-study variance
 Random
--> Different mean ES, between-study variance
+>Different mean ES, between-study variance
 Mixed
--> Study-level regression for mean ES
+>Study-level regression for mean ES
 *The Random effects model can be used to infer what would likely happen if a new study were performed, the FE model cannot
 -----------------------------------------------------------------
 Note for package "metafor"
-
 library("metafor")
 
-# Metafor website and documentation:
-# http://www.metafor-project.org/doku.html
-# and publication:
-# http://www.jstatsoft.org/v36/i03/
+Metafor website and documentation: http://www.metafor-project.org/doku.html
+and publication: http://www.jstatsoft.org/v36/i03/
 
 How to view results on screen:
 #AB: To print results to screen:
 print.rma.uni(resDL)
-#or
-summary.rma.uni(resDL)
+#or summary.rma.uni(resDL)
 
-
-*Note: the log is taken of the relative risk and the odds ratio, which makes these outcome
+Note: the log is taken of the relative risk and the odds ratio, which makes these outcome
 measures symmetric around 0 and helps to make the distribution of these outcome measure
 closer to normal
 >function save.image() is a short-cut for save(list
 =ls(all=TRUE), file=".RData"
-
--------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------
 Note: Meta-regression requires the estimated treatment eect, its variance, and covariate values for each trial in the systematic review. 
 A common reason for not being able to undertake meta-regression is that these are not all available. 
 Any analysis can only be based on the subset of trials for which full information happens to be available, potentially biasing the results.
 
-*small samples -> large SE -> wide Conf intervals -> high p-values
+small samples -> large SE -> wide Conf intervals -> high p-values
 -----------------------------------------------------------------------------------------------
 6th Oct 2017
 Funnel plot-choice of axis (Sterne & Egger 2001)
@@ -126,15 +113,12 @@ sample size (vertical axis) and log odds ratio, log risk ratio and risk differen
 -conclude that funnel plots of meta-analyses should generally use standard error as the measure of study size and ratio measures 
 of treatment effect"
 
-*With the standard error plotted on the vertical axis, emphasis of the plot is on smaller studies where bias is more likely. 
+With the standard error plotted on the vertical axis, emphasis of the plot is on smaller studies where bias is more likely. 
 Axis has to be invereted so that larger trials are placed at the top of the graph. 
 
-*pseudo 95% confidence limits in funnel plots ...
+pseudo 95% confidence limits in funnel plots
 Q: names of studies corresponding to each funnel plot dot?
---------------------------------------------------------------------------------------------------------------------------------
-
-Q: How can I import a particular dataset from excel to R without needing to copy in a different excel document!?!
-Try
+--------------------------------------------------------------------------------------------------
 datasets <- readxl_example("datasets.xlsx")
 read_excel(datasets)
 # Specify sheet either by position or by name
@@ -144,13 +128,17 @@ read_excel(datasets, "mtcars")
 packages dplyr, tidyr, and broom: to create a table in R and export in word (try it)
 
 Remember use NOS_adapted for cross sectional studies
-
 AB:
 # To save R workspace with all objects to use at a later time:
 save.image(file=R_session_saved_image, compress='gzip') --test
 ---------------------------------------------
+Influence analysis: meta-analysis estimates (pooled estimates) are computed omitting one study at a time (...)
+using metainf in meta 
 
-*Influence analysis: meta-analysis estimates (pooled estimates) are computed omitting one study at a time (...)
-* using metainf in meta 
+NOTE: The metabin function requires the number of events (Ee, Ec) and the sample sizes (Ne, Nc) as input as this information is typically reported 
+in publications for binary outcomes. RevMan 5 requires this information as input. By contrast the Stata function metan requires the number of 
+events (Ee, Ec) and non-events (Ne-Ee, Nc-Ec) as input. 
+
+
 
 
