@@ -48,6 +48,8 @@ metapr1
 # obtain forest plot (random effects)
 forest(metapr1, comb.fixed=FALSE, xlab= "proportion")
 
+Try also: forest(metap1, comb.fixed=TRUE, xlab= "proportion")
+
 # then repeat for forest plot (fixed effects)
 forest(metapr1, comb.random=FALSE, xlab= "proportion")
 # gives more precise estimate of effect size, see conf.intervals= narrower
