@@ -121,3 +121,26 @@ sample estimates:
      bias   se.bias     slope 
 1.0506937 2.1794967 0.1487819
 
+######################################################################
+
+metaprop(vddch, totch, studlab=(study), data=prevex)
+metapexc <- metaprop(vddch, totch, studlab=(study), data=prevex)
+Funnel plot
+funnel(metaprev1, comb.fixed=FALSE, xlab = "Logit Transformed Proportion")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
