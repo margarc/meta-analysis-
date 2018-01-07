@@ -3,7 +3,7 @@ Egger's test linear regression
 metabias(metap1, method="linreg")
 
 And how to interpret this:
-Null-hypothesis: no bias in a meta-analysis 
+Null-hypothesis: no bias in a meta-analysis / NO asymmetry ( if p > alpha value this is correct)
 Assumption of test: Linearity still holds in the presence of bias
 Again for this test use the metabias functgion of the R package meta like this:
 example: >metabias (ms1, method="linreg")
