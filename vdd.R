@@ -7,7 +7,7 @@ library(metafor)
 #
 # PREVALENCE
 #
-# Prevalence of vitamin D deficiency from thw whole dataset of studies (n = 51)
+# Prevalence of vitamin D deficiency from the whole dataset of studies (n = 51)
 prev1 <-read.csv("p1.rda", as.is=TRUE)
 prev1
 View(prev1)
