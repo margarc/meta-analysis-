@@ -17,6 +17,7 @@ forest.meta(mind,
             fontsize = 10,
             plotwidth=unit(4, "cm"))
 
+From: ?forest.meta
 
 leftlabs: a character vector specifying labels for (additional) columns on left side of the forest plot (see Details).
 rightlabs:	a character vector specifying labels for (additional) columns on right side of the forest plot (see Details).
