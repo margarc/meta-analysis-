@@ -16,3 +16,15 @@ forest.meta(mind,
             col.diamond.lines.fixed = "black",
             fontsize = 10,
             plotwidth=unit(4, "cm"))
+
+
+leftlabs: a character vector specifying labels for (additional) columns on left side of the forest plot (see Details).
+rightlabs:	a character vector specifying labels for (additional) columns on right side of the forest plot (see Details).
+
+Function	Value of argument leftcols
+# replace to generate labellings 
+metabin	c("studlab", "event.e", "n.e", "event.c", "n.c")
+metacont	c("studlab", "n.e", "mean.e", "sd.e", "n.c", "mean.c", "sd.c")
+metacor	c("studlab", "n")
+metagen	c("studlab", "TE", "seTE")
+metaprop	c("studlab", "event", "n")
