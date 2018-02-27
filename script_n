@@ -18,6 +18,8 @@ forest.meta(mind,
             plotwidth=unit(4, "cm"))
 
 From: ?forest.meta
+also see ?funnel.meta
+
 
 leftlabs: a character vector specifying labels for (additional) columns on left side of the forest plot (see Details).
 rightlabs:	a character vector specifying labels for (additional) columns on right side of the forest plot (see Details).
@@ -40,4 +42,4 @@ funnel.meta(gyn_os, pch=1, xlim = NULL,
                   backtransf = FALSE,
                   main = "Funnel Plot with pseudo 95% Confidence Intervals")
                   
- 
+ If plot is too large export & save as pdf "US Legal"
