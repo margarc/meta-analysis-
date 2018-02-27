@@ -29,3 +29,15 @@ metacont	c("studlab", "n.e", "mean.e", "sd.e", "n.c", "mean.c", "sd.c")
 metacor	c("studlab", "n")
 metagen	c("studlab", "TE", "seTE")
 metaprop	c("studlab", "event", "n")
+
+library(ggplot2)
+
+# if we want to have title on top of the plot use: main = "your chosen title" 
+
+funnel.meta(gyn_os, pch=1, xlim = NULL,
+                  col.fixed = "dodgerblue4",
+                  col.random = "lightskyblue3",
+                  backtransf = FALSE,
+                  main = "Funnel Plot with pseudo 95% Confidence Intervals")
+                  
+ 
