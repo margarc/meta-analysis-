@@ -1,3 +1,13 @@
+useful packages 
+library(meta)
+library(rmeta)
+library(gdata)
+library(metafor)
+require(gdata)
+library(ggplot2)
+library(readxl)
+read.xls
+
 forest.meta(mind, 
             studlab = TRUE, 
             comb.random = TRUE, 
@@ -43,3 +53,6 @@ funnel.meta(gyn_os, pch=1, xlim = NULL,
                   main = "Funnel Plot with pseudo 95% Confidence Intervals")
                   
  If plot is too large export & save as pdf "US Legal"
+ 
+with "xlab i can add labelling to the x-axis below the forest plot"
+using xlab.pos you can specify the place where this legend is example -7 or 1 etc
