@@ -56,3 +56,6 @@ funnel.meta(gyn_os, pch=1, xlim = NULL,
  
 with "xlab i can add labelling to the x-axis below the forest plot"
 using xlab.pos you can specify the place where this legend is example -7 or 1 etc
+?pch
+#pch is used to specify the symbol with which the studies appear on the funnel plot 
+#symbols 1, 10, 13 and 16 use circles
