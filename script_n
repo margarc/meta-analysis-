@@ -64,3 +64,7 @@ A label for the summary measurex (printed at top of figure).
 smlab.pos	
 A numeric specifying the center of the label for the summary measure.
 How to add title to the forest plot
+
+# Test for excess significance: 
+# The number of expected studies with statistically significant results is estimated and compared against the number of observed significant studies. The main application
+# uses a = 0.05 but a range of other alpha threshold values are examined  
