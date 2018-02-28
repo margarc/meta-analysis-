@@ -63,3 +63,4 @@ smlab
 A label for the summary measurex (printed at top of figure).
 smlab.pos	
 A numeric specifying the center of the label for the summary measure.
+How to add title to the forest plot
