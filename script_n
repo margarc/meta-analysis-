@@ -68,3 +68,11 @@ How to add title to the forest plot
 # Test for excess significance: 
 # The number of expected studies with statistically significant results is estimated and compared against the number of observed significant studies. The main application
 # uses a = 0.05 but a range of other alpha threshold values are examined  
+
+
+summary(data)
+
+
+
+
+
