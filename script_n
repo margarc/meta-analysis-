@@ -79,9 +79,25 @@ summary(data)
 mediator variable serves to clarify the nature of the relationship between the independent and dependent variables
 
 ############################
-You can also add: 
-            fontsize = 8,
-            plotwidth=unit(8, "cm"), 
-            xlab = "tau^2 = 0.1117",
-            xlab.pos = -3.5)
+with tau^2 added in forest plot:
+
+forest.meta(meta_ind, 
+            studlab = TRUE, 
+            comb.random = TRUE, 
+            comb.fixed = FALSE, 
+            text.random = "pooled prevalence by random effects:",
+            leftlabs = c("study", "VDD children", "Total children"),
+            lyt.random = TRUE,
+            lyt.fixed = TRUE,
+            prediction = FALSE,
+            col.square = "grey",
+            col.study = "black",
+            col.diamond.random = "green",
+            col.diamond.fixed = "grey",
+            col.diamond.lines.random = "black",
+            col.diamond.lines.fixed = "black",
+            fontsize = 9,
+            plotwidth=unit(3, "cm"),
+            xlab = "tau^2 = 1.0446",
+            xlab.pos = -2)
 
