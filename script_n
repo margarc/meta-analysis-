@@ -78,6 +78,10 @@ How to add title to the forest plot
 summary(data)
 mediator variable serves to clarify the nature of the relationship between the independent and dependent variables
 
-
-
+############################
+You can also add: 
+            fontsize = 8,
+            plotwidth=unit(8, "cm"), 
+            xlab = "tau^2 = 0.1117",
+            xlab.pos = -3.5)
 
