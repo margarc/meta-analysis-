@@ -8,7 +8,7 @@ library(ggplot2)
 library(readxl)
 read.xls
 
-forest.meta(mind, 
+forest.meta(name_analysis, 
             studlab = TRUE, 
             comb.random = TRUE, 
             comb.fixed = TRUE, 
