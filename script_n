@@ -10,6 +10,8 @@ read.xls
 
 
 metaprop(vddch, totch, studlab=(study), data=X)
+name_analysis <- metaprop(vddch, totch, studlab=(study), data=X)
+
 
 forest.meta(name_analysis, 
             studlab = TRUE, 
