@@ -109,4 +109,9 @@ forest.meta(meta_ind,
             plotwidth=unit(3, "cm"),
             xlab = "tau^2 = 1.0446",
             xlab.pos = -2)
-
+            
+            
+How to add title to a forest plot: 
+vp <- viewport(w = .7, h = .7, gp = gpar(col="black"))
+grid.text("Forest plot india", 0.6, 0.8, gp=gpar(cex=1), vp = vp)
+# coordinates will vary accordingly 
