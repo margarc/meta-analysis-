@@ -1,0 +1,10 @@
+R package meta (Schwarzer, 2007) provides the following statistical methods for meta-analysis.
+1.	Fixed effect and random effects model:
+o	Meta-analysis of continuous outcome data (metacont)
+o	Meta-analysis of binary outcome data (metabin)
+o	Meta-analysis of incidence rates (metainc)
+o	Generic inverse variance meta-analysis (metagen)
+o	Meta-analysis of single correlations (metacor)
+o	Meta-analysis of single means (metamean)
+o	Meta-analysis of single proportions (metaprop)
+o	Meta-analysis of single incidence rates (metarate)
